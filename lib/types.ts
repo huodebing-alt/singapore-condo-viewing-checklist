@@ -72,6 +72,10 @@ export type CondoMeta = {
   schools1km?: string[];
   intlSchools?: string[];
   rentalYieldPct?: number;
+  maintFeeBand?: "low" | "medium" | "high";
+  enbloc?: "none" | "rumoured" | "active" | "failed";
+  carpark?: "ample" | "ok" | "tight";
+  evCharging?: "yes" | "planned" | "no";
 };
 
 export type CondoEntry = CondoMeta & {

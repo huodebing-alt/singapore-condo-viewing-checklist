@@ -32,7 +32,8 @@ Buying a resale condominium in Singapore means viewing many units and forgetting
 - 🔎 **Filters** — status, district, bedrooms, max price, plus sort by score / price / PSF
 - 🔐 **Login** — username/password accounts (scrypt-hashed, session cookies) plus optional "Sign in with Google"; every account gets its own private data space
 - 📏 **GFA-harmonization area converter** — Singapore harmonized strata-area definitions on 1 Jun 2023 (aircon ledges/voids no longer count, historically ~4–7% of listed area, sometimes more with planters). Mark a unit's listed area as pre- or post-harmonization and the app computes the harmonized sqft and **harmonized PSF** (adjustable factor, default ÷1.07) so old resale stock and new launches compare apples-to-apples
-- 🗂️ **Auto-populated property metrics** — picking a project from the database fills in nearest MRT + walk time, facilities, public primary schools within 1km, nearby international/private schools, and an indicative gross rental yield (all indicative — verify before you buy)
+- 🗂️ **Auto-populated property metrics** — picking a project from the database fills in nearest MRT + walk time, facilities, public primary schools within 1km, nearby international/private schools, indicative gross rental yield, maintenance-fee band, en-bloc history, carpark ratio and EV charging (all indicative — verify before you buy)
+- ✨ **Checklist pre-fill** — linking a project auto-answers the derivable chips in Building & Facilities, Management & Fees, Location & Connectivity, and Price & Deal (pool/gym presence, carpark, EV, fee band, en-bloc, MRT walk band, schools, remaining lease, yield). Pre-filled answers are ordinary chips — tap to correct anything that's wrong; your own answers are never overwritten
 - 💾 **Cloud storage on Vercel Blob** with automatic on-device (IndexedDB) fallback and one-tap migration to cloud
 - 📱 **Mobile-first PWA** — add it to your home screen, green theme, works one-handed at a viewing
 

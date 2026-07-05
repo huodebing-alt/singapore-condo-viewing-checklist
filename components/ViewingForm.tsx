@@ -23,6 +23,7 @@ import {
   type ViewingStatus,
 } from "@/lib/types";
 import { deleteViewing, saveViewing } from "@/lib/store";
+import { prefillAnswers } from "@/lib/prefill";
 import ChipGroup from "./ChipGroup";
 import CondoSearch from "./CondoSearch";
 import PhotoGrid from "./PhotoGrid";
@@ -110,6 +111,7 @@ function SectionCard({
 export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNew: boolean }) {
   const router = useRouter();
   const [viewing, setViewing] = useState<Viewing>(initial);
+  const [prefilled, setPrefilled] = useState(0);
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved">("idle");
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const dirty = useRef(false);
@@ -161,28 +163,37 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
           <span className="lbl">Condo / project name</span>
           <CondoSearch
             value={viewing.condoName}
-            onPick={(name, entry) =>
-              update(
-                entry
-                  ? {
-                      condoName: name,
-                      district: entry.district,
-                      area: entry.area,
-                      tenure: entry.tenure,
-                      topYear: entry.top,
-                      areaBasis: defaultAreaBasis(entry.top),
-                      condoMeta: {
-                        mrt: entry.mrt,
-                        mrtWalkMins: entry.mrtWalkMins,
-                        facilities: entry.facilities,
-                        schools1km: entry.schools1km,
-                        intlSchools: entry.intlSchools,
-                        rentalYieldPct: entry.rentalYieldPct,
-                      },
-                    }
-                  : { condoName: name }
-              )
-            }
+            onPick={(name, entry) => {
+              if (!entry) {
+                update({ condoName: name });
+                return;
+              }
+              update((cur) => {
+                const { answers, added } = prefillAnswers(entry, cur.answers);
+                setPrefilled(added);
+                return {
+                  condoName: name,
+                  district: entry.district,
+                  area: entry.area,
+                  tenure: entry.tenure,
+                  topYear: entry.top,
+                  areaBasis: defaultAreaBasis(entry.top),
+                  answers,
+                  condoMeta: {
+                    mrt: entry.mrt,
+                    mrtWalkMins: entry.mrtWalkMins,
+                    facilities: entry.facilities,
+                    schools1km: entry.schools1km,
+                    intlSchools: entry.intlSchools,
+                    rentalYieldPct: entry.rentalYieldPct,
+                    maintFeeBand: entry.maintFeeBand,
+                    enbloc: entry.enbloc,
+                    carpark: entry.carpark,
+                    evCharging: entry.evCharging,
+                  },
+                };
+              });
+            }}
           />
         </label>
         {viewing.district && (
@@ -201,6 +212,20 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
             )}
             {viewing.condoMeta.rentalYieldPct ? (
               <div className="metarow">📈 Indicative gross rental yield ~{viewing.condoMeta.rentalYieldPct}%</div>
+            ) : null}
+            {viewing.condoMeta.maintFeeBand ? (
+              <div className="metarow">
+                🧾 Maintenance fee: {viewing.condoMeta.maintFeeBand}
+                {viewing.condoMeta.enbloc && viewing.condoMeta.enbloc !== "none"
+                  ? ` · En-bloc: ${viewing.condoMeta.enbloc}`
+                  : ""}
+              </div>
+            ) : null}
+            {viewing.condoMeta.carpark ? (
+              <div className="metarow">
+                🚗 Carpark: {viewing.condoMeta.carpark}
+                {viewing.condoMeta.evCharging ? ` · EV charging: ${viewing.condoMeta.evCharging}` : ""}
+              </div>
             ) : null}
             {viewing.condoMeta.facilities?.length ? (
               <div className="metarow">🏊 {viewing.condoMeta.facilities.join(" · ")}</div>
@@ -385,6 +410,13 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
       {/* Checklist */}
       <h2 className="pagetitle">Checklist</h2>
       <p className="muted">Tap through each section — answers are one tap, notes optional.</p>
+      {prefilled > 0 && (
+        <div className="banner">
+          ✨ {prefilled} answer{prefilled > 1 ? "s" : ""} pre-filled from the condo database
+          (facilities, fees, location, price &amp; deal). They can be wrong — tap any chip to
+          correct it.
+        </div>
+      )}
       {SECTIONS.map((s) => (
         <SectionCard key={s.id} section={s} viewing={viewing} update={update} />
       ))}

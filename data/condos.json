@@ -19,7 +19,11 @@
    "Cantonment Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "8 Saint Thomas",
@@ -41,7 +45,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.9
+  "rentalYieldPct": 2.9,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "A Treasure Trove",
@@ -66,7 +74,11 @@
   "intlSchools": [
    "Global Indian International School (Punggol)"
   ],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Aalto",
@@ -92,7 +104,11 @@
    "Canadian International School (Tanjong Katong)",
    "EtonHouse International School (Broadrick)"
   ],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Affinity at Serangoon",
@@ -117,7 +133,11 @@
   "intlSchools": [
    "Lycee Francais de Singapour (Ang Mo Kio)"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Alex Residences",
@@ -141,7 +161,11 @@
   "intlSchools": [
    "ISS International School (Preston)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Altez",
@@ -163,7 +187,11 @@
    "Cantonment Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "Amaryllis Ville",
@@ -189,7 +217,11 @@
   "intlSchools": [
    "St. Joseph's Institution International (Thomson)"
   ],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Amber Park",
@@ -214,7 +246,11 @@
   "intlSchools": [
    "Canadian International School (Tanjong Katong)"
   ],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Aquarius By The Park",
@@ -237,7 +273,11 @@
    "Damai Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Archipelago",
@@ -259,7 +299,11 @@
    "Damai Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Ardmore Park",
@@ -280,7 +324,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.5
+  "rentalYieldPct": 2.5,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Artra",
@@ -305,7 +353,11 @@
   "intlSchools": [
    "ISS International School (Preston)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Ascentia Sky",
@@ -330,7 +382,11 @@
   "intlSchools": [
    "ISS International School (Preston)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Aspen Heights",
@@ -353,7 +409,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Astoria Park",
@@ -375,7 +435,11 @@
    "Eunos Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Avenue South Residence",
@@ -399,7 +463,11 @@
    "Radin Mas Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Azalea Park Condominium",
@@ -423,7 +491,11 @@
   "intlSchools": [
    "United World College South East Asia (East)"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Bartley Residences",
@@ -449,7 +521,11 @@
    "Stamford American International School (Woodleigh)",
    "DPS International School (Kovan)"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Bartley Ridge",
@@ -474,7 +550,11 @@
   "intlSchools": [
    "Stamford American International School (Woodleigh)"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Bayshore Park",
@@ -497,7 +577,11 @@
    "Temasek Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Bedok Residences",
@@ -522,7 +606,11 @@
    "St. Anthony's Canossian Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Bellewoods",
@@ -545,7 +633,11 @@
   "intlSchools": [
    "Singapore American School"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Bishan 8",
@@ -567,7 +659,11 @@
    "Kuo Chuan Presbyterian Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Blue Horizon",
@@ -592,7 +688,11 @@
   "intlSchools": [
    "The Japanese School Singapore (Clementi)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Botanique at Bartley",
@@ -617,7 +717,11 @@
    "Stamford American International School (Woodleigh)",
    "DPS International School (Kovan)"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Botannia",
@@ -642,7 +746,11 @@
   "intlSchools": [
    "The Japanese School Singapore (Clementi)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Boulevard 88",
@@ -661,7 +769,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.4
+  "rentalYieldPct": 2.4,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Braddell View",
@@ -683,7 +795,11 @@
    "Marymount Convent School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "failed",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Bullion Park",
@@ -705,7 +821,11 @@
    "Anderson Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Cairnhill Crest",
@@ -727,7 +847,11 @@
    "Anglo-Chinese School (Junior)"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.8
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Cairnhill Nine",
@@ -749,7 +873,11 @@
    "Anglo-Chinese School (Junior)"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Canberra Residences",
@@ -775,7 +903,11 @@
   "intlSchools": [
    "Sir Manasseh Meyer International School"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Canninghill Piers",
@@ -797,7 +929,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Cape Royale",
@@ -817,7 +953,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.6
+  "rentalYieldPct": 2.6,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Caribbean at Keppel Bay",
@@ -840,7 +980,11 @@
    "Blangah Rise Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Carissa Park Condominium",
@@ -865,7 +1009,11 @@
   "intlSchools": [
    "United World College South East Asia (East)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Casa Merah",
@@ -888,7 +1036,11 @@
    "Bedok Green Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Casablanca",
@@ -910,7 +1062,11 @@
   "intlSchools": [
    "Singapore American School"
   ],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Cashew Heights",
@@ -935,7 +1091,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Caspian",
@@ -960,7 +1120,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Castle Green",
@@ -985,7 +1149,11 @@
   "intlSchools": [
    "Lycee Francais de Singapour (Ang Mo Kio)"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Casuarina Cove",
@@ -1008,7 +1176,11 @@
   "intlSchools": [
    "EtonHouse International School (Broadrick)"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Central Green",
@@ -1029,7 +1201,11 @@
    "Zhangde Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Chiltern Park",
@@ -1055,7 +1231,11 @@
    "Australian International School",
    "Stamford American International School (Woodleigh)"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "City Gate",
@@ -1075,7 +1255,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "City Square Residences",
@@ -1099,7 +1283,11 @@
    "Hong Wen School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Citylife @ Tampines",
@@ -1122,7 +1310,11 @@
   "intlSchools": [
    "United World College South East Asia (East)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Citylights",
@@ -1145,7 +1337,11 @@
    "Bendemeer Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Clementi Park",
@@ -1169,7 +1365,11 @@
    "The Japanese School Singapore (Clementi)",
    "Dover Court International School"
   ],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Clover by the Park",
@@ -1193,7 +1393,11 @@
    "Ai Tong School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Coco Palms",
@@ -1218,7 +1422,11 @@
   "intlSchools": [
    "Overseas Family School (Pasir Ris)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Commonwealth Towers",
@@ -1242,7 +1450,11 @@
   "intlSchools": [
    "Tanglin Trust School"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Compass Heights",
@@ -1266,7 +1478,11 @@
    "Nan Chiau Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Concourse Skyline",
@@ -1285,7 +1501,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Copen Grand",
@@ -1310,7 +1530,11 @@
   "intlSchools": [
    "Dulwich College (Singapore)"
   ],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Corals at Keppel Bay",
@@ -1329,7 +1553,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Costa del Sol",
@@ -1352,7 +1580,11 @@
    "Temasek Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Costa Rhu",
@@ -1375,7 +1607,11 @@
   "intlSchools": [
    "EtonHouse International School (Broadrick)"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Cote d'Azur",
@@ -1401,7 +1637,11 @@
   "intlSchools": [
    "Canadian International School (Tanjong Katong)"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Country Park Condominium",
@@ -1421,7 +1661,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "d'Leedon",
@@ -1446,7 +1690,11 @@
   "intlSchools": [
    "Hwa Chong International School"
   ],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "d'Nest",
@@ -1471,7 +1719,11 @@
   "intlSchools": [
    "Overseas Family School (Pasir Ris)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Daintree Residence",
@@ -1493,7 +1745,11 @@
    "Pei Hwa Presbyterian Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Dairy Farm Residences",
@@ -1516,7 +1772,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Dakota Residences",
@@ -1542,7 +1802,11 @@
    "EtonHouse International School (Broadrick)",
    "Canadian International School (Tanjong Katong)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Double Bay Residences",
@@ -1567,7 +1831,11 @@
   "intlSchools": [
    "United World College South East Asia (East)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Dover Parkview",
@@ -1594,7 +1862,11 @@
    "United World College South East Asia (Dover)",
    "Tanglin Trust School"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Duchess Crest",
@@ -1620,7 +1892,11 @@
   "intlSchools": [
    "Hwa Chong International School"
   ],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Duo Residences",
@@ -1642,7 +1918,11 @@
    "Stamford Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "East Meadows",
@@ -1665,7 +1945,11 @@
    "Temasek Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Eastpoint Green",
@@ -1690,7 +1974,11 @@
   "intlSchools": [
    "United World College South East Asia (East)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Echelon",
@@ -1715,7 +2003,11 @@
   "intlSchools": [
    "ISS International School (Preston)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "eCO",
@@ -1737,7 +2029,11 @@
    "Temasek Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Eco Sanctuary",
@@ -1760,7 +2056,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Edelweiss Park Condominium",
@@ -1785,7 +2085,11 @@
   "intlSchools": [
    "United World College South East Asia (East)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Eden Residences Capitol",
@@ -1804,7 +2108,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.6
+  "rentalYieldPct": 2.6,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Eight Courtyards",
@@ -1827,7 +2135,11 @@
   "intlSchools": [
    "GEMS World Academy (Singapore)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Eight Riversuites",
@@ -1852,7 +2164,11 @@
   "intlSchools": [
    "Stamford American International School (Woodleigh)"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Elias Green",
@@ -1876,7 +2192,11 @@
   "intlSchools": [
    "Overseas Family School (Pasir Ris)"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Emerald Garden",
@@ -1894,7 +2214,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "Esparina Residences",
@@ -1917,7 +2241,11 @@
    "North Vista Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Estella Gardens",
@@ -1941,7 +2269,11 @@
   "intlSchools": [
    "United World College South East Asia (East)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Evergreen Park",
@@ -1963,7 +2295,11 @@
    "Rivervale Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Far Horizon Gardens",
@@ -1984,7 +2320,11 @@
    "Anderson Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Ferraria Park Condominium",
@@ -2009,7 +2349,11 @@
   "intlSchools": [
    "United World College South East Asia (East)"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Floridian",
@@ -2035,7 +2379,11 @@
    "Hwa Chong International School",
    "Hollandse School"
   ],
-  "rentalYieldPct": 2.9
+  "rentalYieldPct": 2.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Foresque Residences",
@@ -2061,7 +2409,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Forest Woods",
@@ -2087,7 +2439,11 @@
    "Australian International School",
    "Stamford American International School"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Forestville",
@@ -2112,7 +2468,11 @@
   "intlSchools": [
    "Singapore American School"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Fourth Avenue Residences",
@@ -2139,7 +2499,11 @@
    "Hwa Chong International School",
    "Hollandse School"
   ],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Freesia Woods",
@@ -2161,7 +2525,11 @@
   "intlSchools": [
    "Dover Court International School"
   ],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Gallop Gables",
@@ -2185,7 +2553,11 @@
   "intlSchools": [
    "Hwa Chong International School"
   ],
-  "rentalYieldPct": 2.8
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Gem Residences",
@@ -2209,7 +2581,11 @@
    "Kheng Cheng School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Glendale Park",
@@ -2233,7 +2609,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Gramercy Park",
@@ -2256,7 +2636,11 @@
   "intlSchools": [
    "ISS International School (Preston)"
   ],
-  "rentalYieldPct": 2.5
+  "rentalYieldPct": 2.5,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Grandeur 8",
@@ -2280,7 +2664,11 @@
    "Ang Mo Kio Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Grandeur Park Residences",
@@ -2303,7 +2691,11 @@
    "Bedok Green Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Grange Residences",
@@ -2325,7 +2717,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.5
+  "rentalYieldPct": 2.5,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Guilin View",
@@ -2351,7 +2747,11 @@
   "intlSchools": [
    "Dulwich College (Singapore)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "H2O Residences",
@@ -2374,7 +2774,11 @@
    "Fernvale Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Haig Court",
@@ -2401,7 +2805,11 @@
    "Canadian International School (Tanjong Katong)",
    "EtonHouse International School (Broadrick)"
   ],
-  "rentalYieldPct": 3.1
+  "rentalYieldPct": 3.1,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Hedges Park Condominium",
@@ -2425,7 +2833,11 @@
    "Japanese School Singapore (Changi)",
    "Overseas Family School"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Helios Residences",
@@ -2447,7 +2859,11 @@
    "Anglo-Chinese School (Junior)"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.6
+  "rentalYieldPct": 2.6,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Heritage View",
@@ -2473,7 +2889,11 @@
    "Dover Court International School",
    "United World College (Dover)"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "High Park Residences",
@@ -2498,7 +2918,11 @@
    "Fern Green Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Highline Residences",
@@ -2521,7 +2945,11 @@
    "Zhangde Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Hillion Residences",
@@ -2543,7 +2971,11 @@
    "Bukit Panjang Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Hillview Green",
@@ -2567,7 +2999,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Hillview Regency",
@@ -2593,7 +3029,11 @@
    "Dulwich College (Singapore)",
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Icon",
@@ -2614,7 +3054,11 @@
    "Cantonment Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "Ivory Heights",
@@ -2640,7 +3084,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "failed",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "J Gateway",
@@ -2665,7 +3113,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Jewel @ Buangkok",
@@ -2688,7 +3140,11 @@
    "North Vista Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Kent Ridge Hill Residences",
@@ -2712,7 +3168,11 @@
    "Tanglin Trust School",
    "United World College (Dover)"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Kerrisdale",
@@ -2738,7 +3198,11 @@
   "intlSchools": [
    "Stamford American International School"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Ki Residences",
@@ -2762,7 +3226,11 @@
   "intlSchools": [
    "Dover Court International School"
   ],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Kingsford Hillview Peak",
@@ -2787,7 +3255,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Kingsford Waterbay",
@@ -2810,7 +3282,11 @@
    "CHIJ Our Lady of the Nativity"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Kovan Melody",
@@ -2834,7 +3310,11 @@
    "Holy Innocents' Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Kovan Regency",
@@ -2858,7 +3338,11 @@
    "Holy Innocents' Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Kovan Residences",
@@ -2881,7 +3365,11 @@
    "Xinghua Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Laguna Park",
@@ -2899,7 +3387,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "failed",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Lake Grande",
@@ -2925,7 +3417,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Lakefront Residences",
@@ -2951,7 +3447,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Lakeholmz",
@@ -2976,7 +3476,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Lakepoint Condominium",
@@ -3000,7 +3504,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "failed",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Lakeville",
@@ -3025,7 +3533,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Le Quest",
@@ -3050,7 +3562,11 @@
   "intlSchools": [
    "Dulwich College (Singapore)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Leedon Green",
@@ -3076,7 +3592,11 @@
   "intlSchools": [
    "Hwa Chong International School"
   ],
-  "rentalYieldPct": 2.8
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Leedon Residence",
@@ -3102,7 +3622,11 @@
   "intlSchools": [
    "Hwa Chong International School"
   ],
-  "rentalYieldPct": 2.6
+  "rentalYieldPct": 2.6,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Lentor Modern",
@@ -3125,7 +3649,11 @@
    "Anderson Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Lilydale",
@@ -3146,7 +3674,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Lincoln Suites",
@@ -3168,7 +3700,11 @@
    "St. Joseph's Institution Junior"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Livia",
@@ -3193,7 +3729,11 @@
   "intlSchools": [
    "Overseas Family School"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Loyang Valley",
@@ -3217,7 +3757,11 @@
    "Overseas Family School",
    "Japanese School Singapore (Changi)"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "failed",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Lumiere",
@@ -3237,7 +3781,11 @@
    "Cantonment Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "Mandarin Gardens",
@@ -3259,7 +3807,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "failed",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Maplewoods",
@@ -3285,7 +3837,11 @@
   "intlSchools": [
    "Hollandse School"
   ],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Margaret Ville",
@@ -3309,7 +3865,11 @@
   "intlSchools": [
    "Tanglin Trust School"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Marina Bay Residences",
@@ -3329,7 +3889,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "Marina Bay Suites",
@@ -3349,7 +3913,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "Marina Collection",
@@ -3369,7 +3937,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.4
+  "rentalYieldPct": 2.4,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Marina One Residences",
@@ -3389,7 +3961,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Martin Modern",
@@ -3412,7 +3988,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Martin Place Residences",
@@ -3434,7 +4014,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Maysprings",
@@ -3456,7 +4040,11 @@
    "Bukit Panjang Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Meadows @ Peirce",
@@ -3477,7 +4065,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Melville Park",
@@ -3500,7 +4092,11 @@
    "Changkat Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Merawoods",
@@ -3524,7 +4120,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Mi Casa",
@@ -3547,7 +4147,11 @@
    "South View Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Midtown Bay",
@@ -3569,7 +4173,11 @@
    "Stamford Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "yes"
  },
  {
   "name": "Midtown Modern",
@@ -3592,7 +4200,11 @@
    "Stamford Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "yes"
  },
  {
   "name": "Midwood",
@@ -3617,7 +4229,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Mimosa Park",
@@ -3635,7 +4251,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "no"
  },
  {
   "name": "Modena",
@@ -3658,7 +4278,11 @@
    "Changkat Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "My Manhattan",
@@ -3681,7 +4305,11 @@
    "Changkat Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "New Futura",
@@ -3703,7 +4331,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.4
+  "rentalYieldPct": 2.4,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Newton Suites",
@@ -3724,7 +4356,11 @@
    "Anglo-Chinese School (Junior)"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.9
+  "rentalYieldPct": 2.9,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Normanton Park",
@@ -3749,7 +4385,11 @@
    "Tanglin Trust School",
    "United World College (Dover)"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "North Park Residences",
@@ -3772,7 +4412,11 @@
    "Chongfu School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.1
+  "rentalYieldPct": 4.1,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Northvale",
@@ -3794,7 +4438,11 @@
    "Kranji Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Nouvel 18",
@@ -3814,7 +4462,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.4
+  "rentalYieldPct": 2.4,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Nuovo",
@@ -3837,7 +4489,11 @@
    "Anderson Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "NV Residences",
@@ -3862,7 +4518,11 @@
   "intlSchools": [
    "Overseas Family School"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Oasis @ Elias",
@@ -3888,7 +4548,11 @@
   "intlSchools": [
    "Overseas Family School"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Oleander Towers",
@@ -3910,7 +4574,11 @@
    "CHIJ Primary (Toa Payoh)"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "One Amber",
@@ -3935,7 +4603,11 @@
   "intlSchools": [
    "Canadian International School (Tanjong Katong)"
   ],
-  "rentalYieldPct": 3.1
+  "rentalYieldPct": 3.1,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "One Canberra",
@@ -3958,7 +4630,11 @@
    "Sembawang Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.1
+  "rentalYieldPct": 4.1,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "One Holland Village Residences",
@@ -3979,7 +4655,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "One Pearl Bank",
@@ -4002,7 +4682,11 @@
    "Cantonment Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "One Shenton",
@@ -4021,7 +4705,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "One-North Residences",
@@ -4046,7 +4734,11 @@
    "Tanglin Trust School",
    "Dover Court International School"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Optima @ Tanah Merah",
@@ -4068,7 +4760,11 @@
    "Bedok Green Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Orchid Park Condominium",
@@ -4092,7 +4788,11 @@
    "Northland Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "OUE Twin Peaks",
@@ -4114,7 +4814,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Pandan Valley",
@@ -4138,7 +4842,11 @@
   "intlSchools": [
    "Dover Court International School"
   ],
-  "rentalYieldPct": 2.9
+  "rentalYieldPct": 2.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Parc Botannia",
@@ -4162,7 +4870,11 @@
    "Sengkang Green Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Parc Clematis",
@@ -4190,7 +4902,11 @@
    "NPS International School",
    "The Japanese School Singapore (Clementi)"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Parc Oasis",
@@ -4215,7 +4931,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Parc Olympia",
@@ -4238,7 +4958,11 @@
   "intlSchools": [
    "United World College of South East Asia (East)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Parc Riviera",
@@ -4263,7 +4987,11 @@
    "NPS International School",
    "The Japanese School Singapore (Clementi)"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Parc Rosewood",
@@ -4287,7 +5015,11 @@
   "intlSchools": [
    "Singapore American School"
   ],
-  "rentalYieldPct": 4.3
+  "rentalYieldPct": 4.3,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Parc Vista",
@@ -4312,7 +5044,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 4.1
+  "rentalYieldPct": 4.1,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Park Colonial",
@@ -4339,7 +5075,11 @@
    "Stamford American International School",
    "Australian International School"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Park Infinia at Wee Nam",
@@ -4366,7 +5106,11 @@
   "intlSchools": [
    "San Yu Adventist School"
   ],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Paterson Suites",
@@ -4386,7 +5130,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.6
+  "rentalYieldPct": 2.6,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Pebble Bay",
@@ -4409,7 +5157,11 @@
   "intlSchools": [
    "Canadian International School (Tanjong Katong)"
   ],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Penrose",
@@ -4433,7 +5185,11 @@
    "Canossa Catholic Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Piccadilly Grand",
@@ -4459,7 +5215,11 @@
   "intlSchools": [
    "Stamford American International School"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Pine Grove",
@@ -4484,7 +5244,11 @@
    "Dover Court International School",
    "Anglo-Chinese School (International)"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "failed",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Principal Garden",
@@ -4510,7 +5274,11 @@
    "Tanglin Trust School",
    "ISS International School (Preston)"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Pullman Residences",
@@ -4537,7 +5305,11 @@
   "intlSchools": [
    "San Yu Adventist School"
   ],
-  "rentalYieldPct": 2.9
+  "rentalYieldPct": 2.9,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Q Bay Residences",
@@ -4560,7 +5332,11 @@
   "intlSchools": [
    "United World College of South East Asia (East)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Queens",
@@ -4585,7 +5361,11 @@
   "intlSchools": [
    "Tanglin Trust School"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Queens Peak",
@@ -4610,7 +5390,11 @@
   "intlSchools": [
    "Tanglin Trust School"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Rafflesia Condominium",
@@ -4634,7 +5418,11 @@
    "Catholic High School (Primary)"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Reflections at Keppel Bay",
@@ -4656,7 +5444,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Regent Heights",
@@ -4681,7 +5473,11 @@
   "intlSchools": [
    "Dulwich College Singapore"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Ridgewood",
@@ -4706,7 +5502,11 @@
    "Dover Court International School",
    "Anglo-Chinese School (International)"
   ],
-  "rentalYieldPct": 2.9
+  "rentalYieldPct": 2.9,
+  "maintFeeBand": "medium",
+  "enbloc": "failed",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Rio Vista",
@@ -4730,7 +5530,11 @@
    "Holy Innocents' Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Ripple Bay",
@@ -4755,7 +5559,11 @@
   "intlSchools": [
    "Overseas Family School"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "River Place",
@@ -4778,7 +5586,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Riverbank @ Fernvale",
@@ -4802,7 +5614,11 @@
    "Nan Chiau Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.1
+  "rentalYieldPct": 4.1,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Rivergate",
@@ -4825,7 +5641,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.1
+  "rentalYieldPct": 3.1,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Riversails",
@@ -4846,7 +5666,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Riviere",
@@ -4868,7 +5692,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.1
+  "rentalYieldPct": 3.1,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Rosewood",
@@ -4893,7 +5721,11 @@
   "intlSchools": [
    "Singapore American School"
   ],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Rosewood Suites",
@@ -4917,7 +5749,11 @@
   "intlSchools": [
    "Singapore American School"
   ],
-  "rentalYieldPct": 4.3
+  "rentalYieldPct": 4.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Sanctuary Green",
@@ -4940,7 +5776,11 @@
   "intlSchools": [
    "Canadian International School (Tanjong Katong)"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Savannah CondoPark",
@@ -4963,7 +5803,11 @@
    "Changkat Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Seascape",
@@ -4983,7 +5827,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.5
+  "rentalYieldPct": 2.5,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Seaside Residences",
@@ -5008,7 +5856,11 @@
   "intlSchools": [
    "Sekolah Indonesia Singapura"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Seasons Park",
@@ -5031,7 +5883,11 @@
    "Anderson Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Seletar Park Residence",
@@ -5051,7 +5907,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Sennett Residence",
@@ -5077,7 +5937,11 @@
   "intlSchools": [
    "Stamford American International School"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Sherwood Tower",
@@ -5098,7 +5962,11 @@
    "Bukit Timah Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "no"
  },
  {
   "name": "Signature at Yishun",
@@ -5119,7 +5987,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Signature Park",
@@ -5142,7 +6014,11 @@
    "Bukit Timah Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Silversea",
@@ -5168,7 +6044,11 @@
   "intlSchools": [
    "Canadian International School (Tanjong Katong)"
   ],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Sims Urban Oasis",
@@ -5192,7 +6072,11 @@
    "Canossa Catholic Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Simsville",
@@ -5216,7 +6100,11 @@
    "Kong Hwa School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Sky Everton",
@@ -5239,7 +6127,11 @@
    "CHIJ (Kellock)"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Sky Habitat",
@@ -5264,7 +6156,11 @@
    "Kuo Chuan Presbyterian Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Sky Vue",
@@ -5288,7 +6184,11 @@
    "Kuo Chuan Presbyterian Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Sky@Eleven",
@@ -5313,7 +6213,11 @@
   "intlSchools": [
    "San Yu Adventist School"
   ],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Skyline Residences",
@@ -5337,7 +6241,11 @@
   "intlSchools": [
    "ISS International School (Preston)"
   ],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Skypark Residences",
@@ -5360,7 +6268,11 @@
    "Sembawang Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Skysuites @ Anson",
@@ -5381,7 +6293,11 @@
    "Cantonment Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "Soleil @ Sinaran",
@@ -5405,7 +6321,11 @@
   "intlSchools": [
    "San Yu Adventist School"
   ],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Sommerville Park",
@@ -5427,7 +6347,11 @@
    "Nanyang Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.8
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Sophia Hills",
@@ -5449,7 +6373,11 @@
    "St. Margaret's School (Primary)"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "South Beach Residences",
@@ -5471,7 +6399,11 @@
    "Stamford Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.8
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Spanish Village",
@@ -5493,7 +6425,11 @@
    "Nanyang Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.8
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "medium",
+  "enbloc": "failed",
+  "carpark": "ample",
+  "evCharging": "no"
  },
  {
   "name": "Spottiswoode Residences",
@@ -5515,7 +6451,11 @@
    "CHIJ (Kellock)"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "St Regis Residences",
@@ -5535,7 +6475,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.4
+  "rentalYieldPct": 2.4,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Stirling Residences",
@@ -5560,7 +6504,11 @@
   "intlSchools": [
    "Tanglin Trust School"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Sturdee Residences",
@@ -5584,7 +6532,11 @@
   "intlSchools": [
    "Stamford American International School"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Summerdale",
@@ -5609,7 +6561,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Sunglade",
@@ -5635,7 +6591,11 @@
   "intlSchools": [
    "Australian International School"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Symphony Suites",
@@ -5656,7 +6616,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 4.3
+  "rentalYieldPct": 4.3,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Tanglin Park",
@@ -5676,7 +6640,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.7
+  "rentalYieldPct": 2.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Tanglin View",
@@ -5702,7 +6670,11 @@
    "Tanglin Trust School",
    "ISS International School (Preston)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Terrasse",
@@ -5725,7 +6697,11 @@
   "intlSchools": [
    "DPS International School"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Alps Residences",
@@ -5748,7 +6724,11 @@
   "intlSchools": [
    "United World College of South East Asia (East)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Anchorage",
@@ -5773,7 +6753,11 @@
   "intlSchools": [
    "Tanglin Trust School"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Arte",
@@ -5798,7 +6782,11 @@
   "intlSchools": [
    "San Yu Adventist School"
   ],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Avenir",
@@ -5821,7 +6809,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.8
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "The Azure",
@@ -5840,7 +6832,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.6
+  "rentalYieldPct": 2.6,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Bayshore",
@@ -5864,7 +6860,11 @@
    "Temasek Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Beacon",
@@ -5886,7 +6886,11 @@
    "CHIJ (Kellock)"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Brownstone",
@@ -5909,7 +6913,11 @@
    "Wellington Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Calrose",
@@ -5934,7 +6942,11 @@
   "intlSchools": [
    "Lycee Francais de Singapour"
   ],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Cascadia",
@@ -5961,7 +6973,11 @@
    "Swiss School Singapore",
    "Hollandse School"
   ],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Centris",
@@ -5982,7 +6998,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Clement Canopy",
@@ -6008,7 +7028,11 @@
    "The Japanese School Singapore (Clementi)",
    "NPS International School"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Clift",
@@ -6026,7 +7050,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "The Coast at Sentosa Cove",
@@ -6046,7 +7074,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.5
+  "rentalYieldPct": 2.5,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Cosmopolitan",
@@ -6069,7 +7101,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.8
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Crest",
@@ -6092,7 +7128,11 @@
    "Alexandra Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Criterion",
@@ -6115,7 +7155,11 @@
    "Northland Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Esta",
@@ -6141,7 +7185,11 @@
    "Canadian International School (Tanjong Katong)",
    "EtonHouse International School (Broadrick)"
   ],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Estuary",
@@ -6162,7 +7210,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Flamingo Valley",
@@ -6186,7 +7238,11 @@
    "Opera Estate Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.1
+  "rentalYieldPct": 3.1,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Gale",
@@ -6212,7 +7268,11 @@
    "UWCSEA (East Campus)",
    "Overseas Family School"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Garden Residences",
@@ -6237,7 +7297,11 @@
   "intlSchools": [
    "Australian International School"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "The Gardens at Bishan",
@@ -6260,7 +7324,11 @@
    "Ai Tong School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Glades",
@@ -6283,7 +7351,11 @@
    "Bedok Green Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Greenwich",
@@ -6304,7 +7376,11 @@
    "Fernvale Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Hillier",
@@ -6327,7 +7403,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Interlace",
@@ -6352,7 +7432,11 @@
   "intlSchools": [
    "ISS International School (Preston)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Jade",
@@ -6377,7 +7461,11 @@
   "intlSchools": [
    "Dulwich College (Singapore)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Jovell",
@@ -6403,7 +7491,11 @@
    "UWCSEA (East Campus)",
    "Overseas Family School"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "The Lakeshore",
@@ -6428,7 +7520,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Luxurie",
@@ -6452,7 +7548,11 @@
    "Nan Chiau Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Madeira",
@@ -6477,7 +7577,11 @@
   "intlSchools": [
    "Dulwich College (Singapore)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Makena",
@@ -6502,7 +7606,11 @@
   "intlSchools": [
    "Canadian International School (Tanjong Katong)"
   ],
-  "rentalYieldPct": 2.9
+  "rentalYieldPct": 2.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Mayfair",
@@ -6526,7 +7634,11 @@
   "intlSchools": [
    "Canadian International School (Lakeside)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Metropolitan Condominium",
@@ -6551,7 +7663,11 @@
   "intlSchools": [
    "ISS International School (Preston)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Meyerise",
@@ -6576,7 +7692,11 @@
   "intlSchools": [
    "Canadian International School (Tanjong Katong)"
   ],
-  "rentalYieldPct": 2.9
+  "rentalYieldPct": 2.9,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Minton",
@@ -6601,7 +7721,11 @@
   "intlSchools": [
    "DPS International School"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Nassim",
@@ -6620,7 +7744,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.4
+  "rentalYieldPct": 2.4,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Nautical",
@@ -6643,7 +7771,11 @@
    "Canberra Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.1
+  "rentalYieldPct": 4.1,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Oceanfront @ Sentosa Cove",
@@ -6664,7 +7796,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.6
+  "rentalYieldPct": 2.6,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Orchard Residences",
@@ -6684,7 +7820,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.5
+  "rentalYieldPct": 2.5,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Palette",
@@ -6709,7 +7849,11 @@
   "intlSchools": [
    "Overseas Family School"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Panorama",
@@ -6733,7 +7877,11 @@
    "Mayflower Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Parc Condominium",
@@ -6758,7 +7906,11 @@
   "intlSchools": [
    "The Japanese School (Clementi)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Plaza",
@@ -6777,7 +7929,11 @@
    "Stamford Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "no"
  },
  {
   "name": "The Poiz Residences",
@@ -6803,7 +7959,11 @@
   "intlSchools": [
    "Stamford American International School"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Quartz",
@@ -6826,7 +7986,11 @@
    "North Vista Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Rainforest",
@@ -6849,7 +8013,11 @@
    "Concord Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.1
+  "rentalYieldPct": 4.1,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Rochester Residences",
@@ -6874,7 +8042,11 @@
    "Anglo-Chinese School (International)",
    "Tanglin Trust School"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Sail @ Marina Bay",
@@ -6894,7 +8066,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "The Santorini",
@@ -6917,7 +8093,11 @@
   "intlSchools": [
    "UWCSEA (East Campus)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Sea View",
@@ -6943,7 +8123,11 @@
    "Canadian International School (Tanjong Katong)",
    "EtonHouse International School (Broadrick)"
   ],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Shore Residences",
@@ -6969,7 +8153,11 @@
   "intlSchools": [
    "Canadian International School (Tanjong Katong)"
   ],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Sixth Avenue Residences",
@@ -6992,7 +8180,11 @@
    "Hollandse School",
    "Swiss School in Singapore"
   ],
-  "rentalYieldPct": 2.8
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Skywoods",
@@ -7017,7 +8209,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Sterling",
@@ -7040,7 +8236,11 @@
    "Pei Hwa Presbyterian Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Sunny Spring",
@@ -7061,7 +8261,11 @@
    "Eunos Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Tampines Trilliant",
@@ -7087,7 +8291,11 @@
   "intlSchools": [
    "UWCSEA (East Campus)"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Tapestry",
@@ -7110,7 +8318,11 @@
   "intlSchools": [
    "UWCSEA (East Campus)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "The Tennery",
@@ -7129,7 +8341,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Terrace",
@@ -7152,7 +8368,11 @@
    "Edgefield Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Tessarina",
@@ -7178,7 +8398,11 @@
   "intlSchools": [
    "Hollandse School"
   ],
-  "rentalYieldPct": 2.9
+  "rentalYieldPct": 2.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Topiary",
@@ -7202,7 +8426,11 @@
    "Sengkang Green Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Tre Ver",
@@ -7228,7 +8456,11 @@
   "intlSchools": [
    "Stamford American International School"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "The Trilinq",
@@ -7254,7 +8486,11 @@
   "intlSchools": [
    "The Japanese School (Clementi)"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Trillium",
@@ -7277,7 +8513,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.7
+  "rentalYieldPct": 2.7,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Venue Residences",
@@ -7302,7 +8542,11 @@
   "intlSchools": [
    "Stamford American International School"
   ],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "The Warren",
@@ -7325,7 +8569,11 @@
    "South View Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.1
+  "rentalYieldPct": 4.1,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Waterside",
@@ -7349,7 +8597,11 @@
    "Canadian International School (Tanjong Katong)",
    "EtonHouse International School (Broadrick)"
   ],
-  "rentalYieldPct": 2.9
+  "rentalYieldPct": 2.9,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "The Woodleigh Residences",
@@ -7375,7 +8627,11 @@
   "intlSchools": [
    "Stamford American International School"
   ],
-  "rentalYieldPct": 3.4
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Thomson 800",
@@ -7398,7 +8654,11 @@
    "Marymount Convent School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3
+  "rentalYieldPct": 3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Thomson Grove",
@@ -7419,7 +8679,11 @@
    "CHIJ St. Nicholas Girls' School (Primary)"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "no"
  },
  {
   "name": "Thomson Three",
@@ -7442,7 +8706,11 @@
    "Ai Tong School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Tre Residences",
@@ -7465,7 +8733,11 @@
    "Kong Hwa School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Tree House",
@@ -7491,7 +8763,11 @@
   "intlSchools": [
    "German European School Singapore"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Trellis Towers",
@@ -7516,7 +8792,11 @@
    "Kheng Cheng School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Turquoise",
@@ -7536,7 +8816,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 2.5
+  "rentalYieldPct": 2.5,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Twin Fountains",
@@ -7561,7 +8845,11 @@
   "intlSchools": [
    "Singapore American School"
   ],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Twin Regency",
@@ -7584,7 +8872,11 @@
    "Zhangde Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.2
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Twin Vew",
@@ -7607,7 +8899,11 @@
   "intlSchools": [
    "The Japanese School (Clementi)"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Uptown @ Farrer",
@@ -7626,7 +8922,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.6
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "Urban Vista",
@@ -7649,7 +8949,11 @@
    "Bedok Green Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "V on Shenton",
@@ -7670,7 +8974,11 @@
    "Cantonment Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
  },
  {
   "name": "Valley Park",
@@ -7693,7 +9001,11 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.9
+  "rentalYieldPct": 2.9,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Varsity Park Condominium",
@@ -7718,7 +9030,11 @@
   "intlSchools": [
    "The Japanese School (Clementi)"
   ],
-  "rentalYieldPct": 3.7
+  "rentalYieldPct": 3.7,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Villa Marina",
@@ -7739,7 +9055,11 @@
   ],
   "schools1km": [],
   "intlSchools": [],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Wallich Residence",
@@ -7760,7 +9080,11 @@
    "Cantonment Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.8
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Water Place",
@@ -7784,7 +9108,11 @@
    "Canadian International School (Tanjong Katong)",
    "EtonHouse International School (Broadrick)"
   ],
-  "rentalYieldPct": 3.3
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Waterbank at Dakota",
@@ -7809,7 +9137,11 @@
   "intlSchools": [
    "Canadian International School (Tanjong Katong)"
   ],
-  "rentalYieldPct": 3.5
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Waterfront Key",
@@ -7832,7 +9164,11 @@
    "Damai Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Waterfront Waves",
@@ -7855,7 +9191,11 @@
    "Damai Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Watertown",
@@ -7878,7 +9218,11 @@
    "Waterway Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
  },
  {
   "name": "Waterview",
@@ -7901,7 +9245,11 @@
   "intlSchools": [
    "UWCSEA (East Campus)"
   ],
-  "rentalYieldPct": 3.9
+  "rentalYieldPct": 3.9,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Westwood Residences",
@@ -7924,7 +9272,11 @@
    "Westwood Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Whistler Grand",
@@ -7947,7 +9299,11 @@
   "intlSchools": [
    "The Japanese School (Clementi)"
   ],
-  "rentalYieldPct": 3.8
+  "rentalYieldPct": 3.8,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
  },
  {
   "name": "Whitewater",
@@ -7970,7 +9326,11 @@
   "intlSchools": [
    "Overseas Family School"
   ],
-  "rentalYieldPct": 4
+  "rentalYieldPct": 4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Woodsvale",
@@ -7995,7 +9355,11 @@
   "intlSchools": [
    "Singapore American School"
   ],
-  "rentalYieldPct": 4.2
+  "rentalYieldPct": 4.2,
+  "maintFeeBand": "low",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Yishun Sapphire",
@@ -8018,7 +9382,11 @@
    "Yishun Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 4.1
+  "rentalYieldPct": 4.1,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
  },
  {
   "name": "Yong An Park",
@@ -8041,6 +9409,10 @@
    "River Valley Primary School"
   ],
   "intlSchools": [],
-  "rentalYieldPct": 2.7
+  "rentalYieldPct": 2.7,
+  "maintFeeBand": "high",
+  "enbloc": "failed",
+  "carpark": "ample",
+  "evCharging": "planned"
  }
 ]
