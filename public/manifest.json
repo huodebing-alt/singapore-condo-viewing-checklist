@@ -1,0 +1,17 @@
+{
+  "name": "CondoScout SG — Condo Viewing Checklist",
+  "short_name": "CondoScout",
+  "description": "Singapore resale condo viewing checklist, notes, photos and comparison",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2f7f3",
+  "theme_color": "#12382a",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

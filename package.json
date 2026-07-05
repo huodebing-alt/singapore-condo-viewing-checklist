@@ -1,0 +1,23 @@
+{
+  "name": "sg-condo-viewing-checklist",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mobile-first Singapore resale condo viewing checklist and comparison app",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.5.0",
+    "next": "^15.5.20",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "5.9"
+  }
+}
