@@ -34,10 +34,19 @@ export type Viewing = {
   block: string;
   unit: string;
 
+  // Auto-populated metrics snapshot from the condo database (editable-free,
+  // indicative data: nearest MRT, facilities, schools, yield)
+  condoMeta?: CondoMeta;
+
   // Unit facts
   viewingDate: string;
   floorBand: string; // low | mid | high | penthouse
   sizeSqft?: number;
+  /** Which measurement convention sizeSqft was listed under. */
+  areaBasis?: AreaBasis;
+  /** Divisor to convert a pre-harmonization area to its post-2023 equivalent
+   *  (AC ledge ~4-5%, more with voids/planters). Default 1.07, varies by project. */
+  harmFactor?: number;
   bedrooms?: number;
   bathrooms?: number;
   askingPrice?: number;
@@ -56,13 +65,26 @@ export type Viewing = {
   photos: PhotoMeta[];
 };
 
-export type CondoEntry = {
+export type CondoMeta = {
+  mrt?: string;
+  mrtWalkMins?: number;
+  facilities?: string[];
+  schools1km?: string[];
+  intlSchools?: string[];
+  rentalYieldPct?: number;
+};
+
+export type CondoEntry = CondoMeta & {
   name: string;
   district: number;
   area: string;
   tenure: string;
   top: number;
 };
+
+/** 'pre2023' = strata area includes AC ledge/voids (pre GFA-harmonization);
+ *  'post2023' = harmonized area (plans submitted after 1 Jun 2023). */
+export type AreaBasis = "pre2023" | "post2023";
 
 export const STATUS_LABELS: Record<ViewingStatus, string> = {
   "to-view": "To view",
@@ -111,4 +133,23 @@ export function fmtPrice(n?: number): string {
 export function psf(v: Viewing): number | undefined {
   if (!v.askingPrice || !v.sizeSqft) return undefined;
   return Math.round(v.askingPrice / v.sizeSqft);
+}
+
+/** Size converted to the post-2023 harmonized convention (excl. AC ledge). */
+export function harmonizedSqft(v: Viewing): number | undefined {
+  if (!v.sizeSqft) return undefined;
+  if (v.areaBasis === "post2023") return v.sizeSqft;
+  return Math.round(v.sizeSqft / (v.harmFactor ?? 1.07));
+}
+
+/** PSF on harmonized area — the apples-to-apples number across old and new projects. */
+export function harmonizedPsf(v: Viewing): number | undefined {
+  const size = harmonizedSqft(v);
+  if (!v.askingPrice || !size) return undefined;
+  return Math.round(v.askingPrice / size);
+}
+
+/** Sensible default basis: post-harmonization projects only started completing ~2027. */
+export function defaultAreaBasis(topYear?: number): AreaBasis {
+  return topYear && topYear >= 2027 ? "post2023" : "pre2023";
 }

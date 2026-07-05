@@ -1,27 +1,56 @@
-// Data layer. Cloud-first (API routes backed by Vercel Blob); falls back to
-// on-device IndexedDB when the deployment has no Blob store configured
-// (or when running without network). The UI shows which mode is active.
+// Data layer. Cloud-first (API routes backed by Vercel Blob, scoped to the
+// signed-in user); falls back to on-device IndexedDB when the deployment has
+// no Blob store configured. When cloud storage exists but the visitor is not
+// signed in, we redirect to /login instead of touching any data.
 
 import type { Viewing } from "./types";
 import { idb } from "./idb";
 
-let cloudAvailable: boolean | null = null;
+type Health = { cloud: boolean; authed: boolean };
+let health: Health | null = null;
 
-export async function isCloud(): Promise<boolean> {
-  if (cloudAvailable !== null) return cloudAvailable;
+async function getHealth(): Promise<Health> {
+  if (health) return health;
   try {
     const res = await fetch("/api/health", { cache: "no-store" });
-    const j = await res.json();
-    cloudAvailable = !!j.cloud;
+    health = (await res.json()) as Health;
   } catch {
-    cloudAvailable = false;
+    health = { cloud: false, authed: false };
   }
-  return cloudAvailable;
+  return health;
+}
+
+function toLogin(): never {
+  if (typeof window !== "undefined" && window.location.pathname !== "/login") {
+    window.location.href = "/login";
+  }
+  throw new Error("not signed in");
+}
+
+/** True when the deployment has cloud storage AND the user is signed in. */
+export async function isCloud(): Promise<boolean> {
+  const h = await getHealth();
+  if (h.cloud && !h.authed) toLogin();
+  return h.cloud;
+}
+
+/** Cloud configured at all (regardless of auth) — for banners. */
+export async function cloudConfigured(): Promise<boolean> {
+  return (await getHealth()).cloud;
+}
+
+async function api(path: string, init?: RequestInit): Promise<Response> {
+  const res = await fetch(path, init);
+  if (res.status === 401) {
+    health = null;
+    toLogin();
+  }
+  return res;
 }
 
 export async function listViewings(): Promise<Viewing[]> {
   if (await isCloud()) {
-    const res = await fetch("/api/viewings", { cache: "no-store" });
+    const res = await api("/api/viewings", { cache: "no-store" });
     if (res.ok) return res.json();
   }
   return idb.getAll<Viewing>("viewings");
@@ -29,7 +58,7 @@ export async function listViewings(): Promise<Viewing[]> {
 
 export async function getViewing(id: string): Promise<Viewing | undefined> {
   if (await isCloud()) {
-    const res = await fetch(`/api/viewings/${id}`, { cache: "no-store" });
+    const res = await api(`/api/viewings/${id}`, { cache: "no-store" });
     if (res.ok) return res.json();
     if (res.status === 404) return undefined;
   }
@@ -39,7 +68,7 @@ export async function getViewing(id: string): Promise<Viewing | undefined> {
 export async function saveViewing(v: Viewing): Promise<void> {
   v.updatedAt = new Date().toISOString();
   if (await isCloud()) {
-    const res = await fetch("/api/viewings", {
+    const res = await api("/api/viewings", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(v),
@@ -51,7 +80,7 @@ export async function saveViewing(v: Viewing): Promise<void> {
 
 export async function deleteViewing(v: Viewing): Promise<void> {
   if (await isCloud()) {
-    const res = await fetch(`/api/viewings/${v.id}`, { method: "DELETE" });
+    const res = await api(`/api/viewings/${v.id}`, { method: "DELETE" });
     if (res.ok) return;
   }
   await idb.del("viewings", v.id);
@@ -68,7 +97,7 @@ export async function savePhoto(
 ): Promise<string | undefined> {
   if (await isCloud()) {
     const blob = await (await fetch(dataUrl)).blob();
-    const res = await fetch(`/api/photos/${viewingId}/${photoId}`, {
+    const res = await api(`/api/photos/${viewingId}/${photoId}`, {
       method: "PUT",
       headers: { "Content-Type": "image/jpeg" },
       body: blob,
@@ -96,7 +125,7 @@ export async function deletePhoto(
   photo: { id: string; url?: string }
 ): Promise<void> {
   if (photo.url && (await isCloud())) {
-    await fetch(`/api/photos/${viewingId}/${photo.id}`, { method: "DELETE" }).catch(() => {});
+    await api(`/api/photos/${viewingId}/${photo.id}`, { method: "DELETE" }).catch(() => {});
   }
   await idb.del("photos", photo.id).catch(() => {});
 }
@@ -110,7 +139,7 @@ export async function localViewings(): Promise<Viewing[]> {
   }
 }
 
-/** Push device-stored viewings + photos to the cloud, then clear local copies. */
+/** Push device-stored viewings + photos to the signed-in cloud account. */
 export async function migrateLocalToCloud(): Promise<number> {
   if (!(await isCloud())) return 0;
   const locals = await localViewings();

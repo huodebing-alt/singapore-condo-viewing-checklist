@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import TopBar from "@/components/TopBar";
 import { SECTIONS, overallScore, scoreColor, sectionScore } from "@/lib/checklist";
-import { STATUS_LABELS, fmtPrice, psf, type Viewing } from "@/lib/types";
+import { STATUS_LABELS, fmtPrice, harmonizedPsf, harmonizedSqft, psf, type Viewing } from "@/lib/types";
 import { listViewings } from "@/lib/store";
 
 export default function ComparePage() {
@@ -68,21 +68,24 @@ export default function ComparePage() {
   const withScore = chosen.filter((v) => overallScore(v.answers) !== null);
   const topScore = withScore[0];
   const cheapestPsf = [...chosen]
-    .filter((v) => psf(v))
-    .sort((a, b) => (psf(a) as number) - (psf(b) as number))[0];
+    .filter((v) => harmonizedPsf(v))
+    .sort((a, b) => (harmonizedPsf(a) as number) - (harmonizedPsf(b) as number))[0];
   const bestValue = [...withScore]
-    .filter((v) => psf(v))
+    .filter((v) => harmonizedPsf(v))
     .sort(
       (a, b) =>
-        (overallScore(b.answers) as number) / (psf(b) as number) -
-        (overallScore(a.answers) as number) / (psf(a) as number)
+        (overallScore(b.answers) as number) / (harmonizedPsf(b) as number) -
+        (overallScore(a.answers) as number) / (harmonizedPsf(a) as number)
     )[0];
 
   // Best-per-row helpers
   const best = {
     price: Math.min(...chosen.map((v) => v.askingPrice ?? Infinity)),
     psf: Math.min(...chosen.map((v) => psf(v) ?? Infinity)),
+    harmPsf: Math.min(...chosen.map((v) => harmonizedPsf(v) ?? Infinity)),
     size: Math.max(...chosen.map((v) => v.sizeSqft ?? -1)),
+    yield: Math.max(...chosen.map((v) => v.condoMeta?.rentalYieldPct ?? -1)),
+    mrt: Math.min(...chosen.map((v) => v.condoMeta?.mrtWalkMins ?? Infinity)),
     overall: Math.max(...chosen.map((v) => overallScore(v.answers) ?? -1)),
   };
 
@@ -134,7 +137,7 @@ export default function ComparePage() {
               {cheapestPsf && (
                 <p style={{ fontSize: 14, margin: "6px 0" }}>
                   💰 <strong>{cheapestPsf.condoName}</strong> is cheapest per sqft ($
-                  {psf(cheapestPsf)?.toLocaleString()} psf).
+                  {harmonizedPsf(cheapestPsf)?.toLocaleString()} psf, harmonized basis).
                 </p>
               )}
               {bestValue && (
@@ -204,7 +207,7 @@ export default function ComparePage() {
                       ))}
                     </tr>
                     <tr>
-                      <th>PSF</th>
+                      <th>PSF (listed)</th>
                       {chosen.map((v) => {
                         const p = psf(v);
                         return (
@@ -215,13 +218,58 @@ export default function ComparePage() {
                       })}
                     </tr>
                     <tr>
-                      <th>Size</th>
+                      <th>PSF (harmonized)</th>
+                      {chosen.map((v) => {
+                        const hp = harmonizedPsf(v);
+                        return (
+                          <td key={v.id} className={hp && hp === best.harmPsf ? "best" : ""}>
+                            {hp ? `$${hp.toLocaleString()}` : "—"}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                    <tr>
+                      <th>Size (listed / harmonized)</th>
                       {chosen.map((v) => (
                         <td
                           key={v.id}
                           className={v.sizeSqft && v.sizeSqft === best.size ? "best" : ""}
                         >
-                          {v.sizeSqft ? `${v.sizeSqft} sqft` : "—"}
+                          {v.sizeSqft
+                            ? `${v.sizeSqft} / ${harmonizedSqft(v)?.toLocaleString()} sqft`
+                            : "—"}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr>
+                      <th>🚇 MRT walk</th>
+                      {chosen.map((v) => {
+                        const m = v.condoMeta?.mrtWalkMins;
+                        return (
+                          <td key={v.id} className={m && m === best.mrt ? "best" : ""}>
+                            {v.condoMeta?.mrt ? `${v.condoMeta.mrt}${m ? ` · ${m} min` : ""}` : "—"}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                    <tr>
+                      <th>📈 Indicative yield</th>
+                      {chosen.map((v) => {
+                        const y = v.condoMeta?.rentalYieldPct;
+                        return (
+                          <td key={v.id} className={y && y === best.yield ? "best" : ""}>
+                            {y ? `~${y}%` : "—"}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                    <tr>
+                      <th>🏫 Schools 1km</th>
+                      {chosen.map((v) => (
+                        <td key={v.id} style={{ whiteSpace: "normal", maxWidth: 180 }}>
+                          {v.condoMeta?.schools1km?.length
+                            ? v.condoMeta.schools1km.join(", ")
+                            : "—"}
                         </td>
                       ))}
                     </tr>

@@ -30,6 +30,9 @@ Buying a resale condominium in Singapore means viewing many units and forgetting
 - 🧑‍💼 **Agent tracking** — name, agency, phone (tap to call), CEA registration number
 - 📊 **Compare & analyse** — side-by-side table with best-in-row highlighting, overall ranking bars, and insights (highest score, cheapest PSF, best score-for-price)
 - 🔎 **Filters** — status, district, bedrooms, max price, plus sort by score / price / PSF
+- 🔐 **Login** — username/password accounts (scrypt-hashed, session cookies) plus optional "Sign in with Google"; every account gets its own private data space
+- 📏 **GFA-harmonization area converter** — Singapore harmonized strata-area definitions on 1 Jun 2023 (aircon ledges/voids no longer count, historically ~4–7% of listed area, sometimes more with planters). Mark a unit's listed area as pre- or post-harmonization and the app computes the harmonized sqft and **harmonized PSF** (adjustable factor, default ÷1.07) so old resale stock and new launches compare apples-to-apples
+- 🗂️ **Auto-populated property metrics** — picking a project from the database fills in nearest MRT + walk time, facilities, public primary schools within 1km, nearby international/private schools, and an indicative gross rental yield (all indicative — verify before you buy)
 - 💾 **Cloud storage on Vercel Blob** with automatic on-device (IndexedDB) fallback and one-tap migration to cloud
 - 📱 **Mobile-first PWA** — add it to your home screen, green theme, works one-handed at a viewing
 
@@ -46,12 +49,21 @@ Open http://localhost:3000. Without cloud storage configured, everything is save
 
 1. Push this repo to GitHub and import it in [Vercel](https://vercel.com/new) (or `npx vercel`).
 2. In the Vercel dashboard → your project → **Storage** → **Create Database** → **Blob** → connect it to the project. This adds the `BLOB_READ_WRITE_TOKEN` environment variable automatically.
-3. Redeploy. The app detects the store and saves all viewings and photos to Vercel Blob.
-4. If you logged viewings on your phone before connecting the store, the home screen offers a one-tap **"Upload to cloud"** migration.
+3. Set the auth environment variables (Settings → Environment Variables):
+   - `AUTH_SECRET` — any long random string (e.g. `openssl rand -hex 32`)
+   - `DEFAULT_USER` / `DEFAULT_PASSWORD` — seeds the first account on first login
+4. Redeploy. Sign in with the default account; change the password from the 👤 Account page.
+5. If you logged viewings on a phone before connecting the store, the home screen offers a one-tap **"Upload to cloud"** migration into your account.
+
+### Google sign-in (optional)
+
+1. In [Google Cloud Console](https://console.cloud.google.com/apis/credentials) create an **OAuth client ID** (type: Web application) and add your deployment URL to *Authorized JavaScript origins*.
+2. Set `NEXT_PUBLIC_GOOGLE_CLIENT_ID` in Vercel env vars and redeploy.
+3. A "Sign in with Google" button appears on the login page; each Google account gets its own workspace automatically.
 
 ### Privacy note
 
-This is a personal, single-user app with no authentication. Data is stored in your own Vercel Blob store under unguessable URLs, but anyone with your deployment URL can read/write the app. For personal use that's usually fine; enable [Vercel Deployment Protection](https://vercel.com/docs/security/deployment-protection) (Settings → Deployment Protection) if you want it locked behind your Vercel login.
+Viewings and account data are only reachable through the authenticated API. Photos are served from Vercel Blob via unguessable public URLs (standard Blob behaviour) — fine for personal use, but don't treat photo URLs as secrets.
 
 ## Tech stack
 

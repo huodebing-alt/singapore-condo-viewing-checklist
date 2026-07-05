@@ -5,8 +5,9 @@ import Link from "next/link";
 import TopBar from "@/components/TopBar";
 import ScoreBadge from "@/components/ScoreBadge";
 import { overallScore } from "@/lib/checklist";
-import { STATUS_LABELS, fmtPrice, psf, type Viewing } from "@/lib/types";
-import { isCloud, listViewings, localViewings, migrateLocalToCloud } from "@/lib/store";
+import Link2 from "next/link";
+import { STATUS_LABELS, fmtPrice, harmonizedPsf, psf, type Viewing } from "@/lib/types";
+import { cloudConfigured, listViewings, localViewings, migrateLocalToCloud } from "@/lib/store";
 
 type SortKey = "newest" | "score" | "price" | "psf";
 
@@ -24,9 +25,10 @@ export default function HomePage() {
   const [sort, setSort] = useState<SortKey>("newest");
 
   async function load() {
-    const [vs, c] = await Promise.all([listViewings(), isCloud()]);
-    setViewings(vs);
+    const c = await cloudConfigured();
     setCloud(c);
+    const vs = await listViewings(); // redirects to /login if cloud + signed out
+    setViewings(vs);
     if (c) setLocalCount((await localViewings()).length);
   }
 
@@ -76,7 +78,16 @@ export default function HomePage() {
 
   return (
     <>
-      <TopBar title="CondoScout SG" />
+      <TopBar
+        title="CondoScout SG"
+        right={
+          cloud ? (
+            <Link2 href="/account" aria-label="Account" style={{ fontSize: 19 }}>
+              👤
+            </Link2>
+          ) : undefined
+        }
+      />
       <div className="shell">
         {cloud === false && (
           <div className="banner">
@@ -195,6 +206,9 @@ export default function HomePage() {
                 <div className="facts">
                   {v.askingPrice ? <span className="fact">{fmtPrice(v.askingPrice)}</span> : null}
                   {p ? <span className="fact">${p.toLocaleString()} psf</span> : null}
+                  {harmonizedPsf(v) && harmonizedPsf(v) !== p ? (
+                    <span className="fact">${harmonizedPsf(v)?.toLocaleString()} psf harm.</span>
+                  ) : null}
                   {v.sizeSqft ? <span className="fact">{v.sizeSqft} sqft</span> : null}
                   {v.bedrooms ? <span className="fact">{v.bedrooms} BR</span> : null}
                   {v.tenure ? <span className="fact">{v.tenure}</span> : null}

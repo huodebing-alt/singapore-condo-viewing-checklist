@@ -1,0 +1,690 @@
+{
+  "One-North Residences": {
+    "mrt": "one-north (CC23)",
+    "mrtWalkMins": 3,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Fairfield Methodist School (Primary)"],
+    "intlSchools": ["Tanglin Trust School", "Dover Court International School"],
+    "rentalYieldPct": 3.8
+  },
+  "Optima @ Tanah Merah": {
+    "mrt": "Tanah Merah (EW4)",
+    "mrtWalkMins": 2,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Bedok Green Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.9
+  },
+  "Orchid Park Condominium": {
+    "mrt": "Khatib (NS14)",
+    "mrtWalkMins": 9,
+    "facilities": ["Pool", "Gym", "Tennis court", "Squash court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Northland Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 4.2
+  },
+  "OUE Twin Peaks": {
+    "mrt": "Great World (TE15)",
+    "mrtWalkMins": 8,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "24hr security", "Concierge"],
+    "schools1km": ["River Valley Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.0
+  },
+  "Pandan Valley": {
+    "mrt": "Holland Village (CC21)",
+    "mrtWalkMins": 18,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Playground", "24hr security"],
+    "schools1km": ["Henry Park Primary School"],
+    "intlSchools": ["Dover Court International School"],
+    "rentalYieldPct": 2.9
+  },
+  "Parc Botannia": {
+    "mrt": "Thanggam LRT (SW4)",
+    "mrtWalkMins": 4,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Fernvale Primary School", "Sengkang Green Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 4.0
+  },
+  "Parc Clematis": {
+    "mrt": "Clementi (EW23)",
+    "mrtWalkMins": 12,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "Clubhouse", "24hr security"],
+    "schools1km": ["Nan Hua Primary School", "Pei Tong Primary School"],
+    "intlSchools": ["NPS International School", "The Japanese School Singapore (Clementi)"],
+    "rentalYieldPct": 3.7
+  },
+  "Parc Oasis": {
+    "mrt": "Chinese Garden (EW25)",
+    "mrtWalkMins": 8,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Fuhua Primary School"],
+    "intlSchools": ["Canadian International School (Lakeside)"],
+    "rentalYieldPct": 4.0
+  },
+  "Parc Olympia": {
+    "mrt": "Tampines East (DT33)",
+    "mrtWalkMins": 19,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": ["United World College of South East Asia (East)"],
+    "rentalYieldPct": 4.0
+  },
+  "Parc Riviera": {
+    "mrt": "Clementi (EW23)",
+    "mrtWalkMins": 20,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Qifa Primary School"],
+    "intlSchools": ["NPS International School", "The Japanese School Singapore (Clementi)"],
+    "rentalYieldPct": 3.8
+  },
+  "Parc Rosewood": {
+    "mrt": "Woodlands North (TE1)",
+    "mrtWalkMins": 14,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Si Ling Primary School"],
+    "intlSchools": ["Singapore American School"],
+    "rentalYieldPct": 4.3
+  },
+  "Parc Vista": {
+    "mrt": "Lakeside (EW26)",
+    "mrtWalkMins": 6,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Lakeside Primary School"],
+    "intlSchools": ["Canadian International School (Lakeside)"],
+    "rentalYieldPct": 4.1
+  },
+  "Park Colonial": {
+    "mrt": "Woodleigh (NE11)",
+    "mrtWalkMins": 1,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Maris Stella High School (Primary Section)", "Cedar Primary School"],
+    "intlSchools": ["Stamford American International School", "Australian International School"],
+    "rentalYieldPct": 3.6
+  },
+  "Park Infinia at Wee Nam": {
+    "mrt": "Novena (NS20)",
+    "mrtWalkMins": 8,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Anglo-Chinese School (Primary)", "Anglo-Chinese School (Junior)", "St Joseph's Institution Junior"],
+    "intlSchools": ["San Yu Adventist School"],
+    "rentalYieldPct": 3.0
+  },
+  "Paterson Suites": {
+    "mrt": "Orchard Boulevard (TE13)",
+    "mrtWalkMins": 6,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "24hr security"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 2.6
+  },
+  "Pebble Bay": {
+    "mrt": "Tanjong Rhu (TE23)",
+    "mrtWalkMins": 10,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": ["Canadian International School (Tanjong Katong)"],
+    "rentalYieldPct": 3.3
+  },
+  "Penrose": {
+    "mrt": "Aljunied (EW9)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Geylang Methodist School (Primary)", "Canossa Catholic Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.8
+  },
+  "Piccadilly Grand": {
+    "mrt": "Farrer Park (NE8)",
+    "mrtWalkMins": 1,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "Clubhouse", "24hr security"],
+    "schools1km": ["Farrer Park Primary School", "St Joseph's Institution Junior"],
+    "intlSchools": ["Stamford American International School"],
+    "rentalYieldPct": 3.6
+  },
+  "Pine Grove": {
+    "mrt": "Dover (EW22)",
+    "mrtWalkMins": 20,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Playground", "24hr security"],
+    "schools1km": ["Henry Park Primary School"],
+    "intlSchools": ["Dover Court International School", "Anglo-Chinese School (International)"],
+    "rentalYieldPct": 3.4
+  },
+  "Principal Garden": {
+    "mrt": "Redhill (EW18)",
+    "mrtWalkMins": 10,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Alexandra Primary School"],
+    "intlSchools": ["Tanglin Trust School", "ISS International School (Preston)"],
+    "rentalYieldPct": 3.4
+  },
+  "Pullman Residences": {
+    "mrt": "Newton (NS21/DT11)",
+    "mrtWalkMins": 3,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security", "Concierge"],
+    "schools1km": ["Anglo-Chinese School (Junior)", "Anglo-Chinese School (Primary)", "St Joseph's Institution Junior"],
+    "intlSchools": ["San Yu Adventist School"],
+    "rentalYieldPct": 2.9
+  },
+  "Q Bay Residences": {
+    "mrt": "Tampines West (DT31)",
+    "mrtWalkMins": 18,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": ["United World College of South East Asia (East)"],
+    "rentalYieldPct": 4.0
+  },
+  "Queens": {
+    "mrt": "Queenstown (EW19)",
+    "mrtWalkMins": 3,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Queenstown Primary School"],
+    "intlSchools": ["Tanglin Trust School"],
+    "rentalYieldPct": 3.8
+  },
+  "Queens Peak": {
+    "mrt": "Queenstown (EW19)",
+    "mrtWalkMins": 2,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Queenstown Primary School"],
+    "intlSchools": ["Tanglin Trust School"],
+    "rentalYieldPct": 3.8
+  },
+  "Rafflesia Condominium": {
+    "mrt": "Bright Hill (TE7)",
+    "mrtWalkMins": 10,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Ai Tong School", "Catholic High School (Primary)"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.7
+  },
+  "Reflections at Keppel Bay": {
+    "mrt": "Keppel (CC30)",
+    "mrtWalkMins": 10,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security", "Concierge"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 3.2
+  },
+  "Regent Heights": {
+    "mrt": "Bukit Gombak (NS3)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["St. Anthony's Primary School"],
+    "intlSchools": ["Dulwich College Singapore"],
+    "rentalYieldPct": 4.0
+  },
+  "Ridgewood": {
+    "mrt": "Dover (EW22)",
+    "mrtWalkMins": 15,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Playground", "24hr security"],
+    "schools1km": ["Henry Park Primary School"],
+    "intlSchools": ["Dover Court International School", "Anglo-Chinese School (International)"],
+    "rentalYieldPct": 2.9
+  },
+  "Rio Vista": {
+    "mrt": "Hougang (NE14)",
+    "mrtWalkMins": 18,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["CHIJ Our Lady of the Nativity", "Holy Innocents' Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.9
+  },
+  "Ripple Bay": {
+    "mrt": "Pasir Ris (EW1)",
+    "mrtWalkMins": 24,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Casuarina Primary School"],
+    "intlSchools": ["Overseas Family School"],
+    "rentalYieldPct": 4.0
+  },
+  "River Place": {
+    "mrt": "Havelock (TE16)",
+    "mrtWalkMins": 7,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["River Valley Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.4
+  },
+  "Riverbank @ Fernvale": {
+    "mrt": "Layar LRT (SW6)",
+    "mrtWalkMins": 3,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Fernvale Primary School", "Nan Chiau Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 4.1
+  },
+  "Rivergate": {
+    "mrt": "Fort Canning (DT20)",
+    "mrtWalkMins": 8,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["River Valley Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.1
+  },
+  "Riversails": {
+    "mrt": "Hougang (NE14)",
+    "mrtWalkMins": 24,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 4.0
+  },
+  "Riviere": {
+    "mrt": "Havelock (TE16)",
+    "mrtWalkMins": 6,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "24hr security", "Concierge"],
+    "schools1km": ["River Valley Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.1
+  },
+  "Rosewood": {
+    "mrt": "Woodlands North (TE1)",
+    "mrtWalkMins": 15,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Si Ling Primary School"],
+    "intlSchools": ["Singapore American School"],
+    "rentalYieldPct": 4.2
+  },
+  "Rosewood Suites": {
+    "mrt": "Woodlands North (TE1)",
+    "mrtWalkMins": 15,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Si Ling Primary School"],
+    "intlSchools": ["Singapore American School"],
+    "rentalYieldPct": 4.3
+  },
+  "Sanctuary Green": {
+    "mrt": "Tanjong Rhu (TE23)",
+    "mrtWalkMins": 6,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": ["Canadian International School (Tanjong Katong)"],
+    "rentalYieldPct": 3.4
+  },
+  "Savannah CondoPark": {
+    "mrt": "Upper Changi (DT34)",
+    "mrtWalkMins": 12,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Changkat Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 4.0
+  },
+  "Seascape": {
+    "mrt": "HarbourFront (NE1/CC29)",
+    "mrtWalkMins": 35,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "24hr security", "Concierge"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 2.5
+  },
+  "Seaside Residences": {
+    "mrt": "Siglap (TE28)",
+    "mrtWalkMins": 3,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["St. Stephen's School"],
+    "intlSchools": ["Sekolah Indonesia Singapura"],
+    "rentalYieldPct": 3.4
+  },
+  "Seasons Park": {
+    "mrt": "Yio Chu Kang (NS15)",
+    "mrtWalkMins": 12,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Anderson Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.9
+  },
+  "Seletar Park Residence": {
+    "mrt": "Fernvale LRT (SW5)",
+    "mrtWalkMins": 22,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 3.7
+  },
+  "Sennett Residence": {
+    "mrt": "Potong Pasir (NE10)",
+    "mrtWalkMins": 2,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["St. Andrew's Junior School", "Cedar Primary School"],
+    "intlSchools": ["Stamford American International School"],
+    "rentalYieldPct": 3.6
+  },
+  "Sherwood Tower": {
+    "mrt": "Beauty World (DT5)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "Playground", "24hr security"],
+    "schools1km": ["Pei Hwa Presbyterian Primary School", "Bukit Timah Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.5
+  },
+  "Signature at Yishun": {
+    "mrt": "Yishun (NS13)",
+    "mrtWalkMins": 22,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 4.2
+  },
+  "Signature Park": {
+    "mrt": "Beauty World (DT5)",
+    "mrtWalkMins": 12,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Bukit Timah Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.2
+  },
+  "Silversea": {
+    "mrt": "Marine Parade (TE26)",
+    "mrtWalkMins": 8,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["CHIJ (Katong) Primary", "Tao Nan School"],
+    "intlSchools": ["Canadian International School (Tanjong Katong)"],
+    "rentalYieldPct": 3.3
+  },
+  "Sims Urban Oasis": {
+    "mrt": "Aljunied (EW9)",
+    "mrtWalkMins": 6,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Geylang Methodist School (Primary)", "Canossa Catholic Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.8
+  },
+  "Simsville": {
+    "mrt": "Aljunied (EW9)",
+    "mrtWalkMins": 8,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Geylang Methodist School (Primary)", "Kong Hwa School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.7
+  },
+  "Sky Everton": {
+    "mrt": "Cantonment (CC31)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Cantonment Primary School", "CHIJ (Kellock)"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.2
+  },
+  "Sky Habitat": {
+    "mrt": "Bishan (NS17/CC15)",
+    "mrtWalkMins": 9,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "Sky gardens", "24hr security"],
+    "schools1km": ["Catholic High School (Primary)", "Kuo Chuan Presbyterian Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.6
+  },
+  "Sky Vue": {
+    "mrt": "Bishan (NS17/CC15)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "Sky gardens", "24hr security"],
+    "schools1km": ["Catholic High School (Primary)", "Kuo Chuan Presbyterian Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.6
+  },
+  "Sky@Eleven": {
+    "mrt": "Novena (NS20)",
+    "mrtWalkMins": 15,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["CHIJ Primary (Toa Payoh)"],
+    "intlSchools": ["San Yu Adventist School"],
+    "rentalYieldPct": 3.2
+  },
+  "Skyline Residences": {
+    "mrt": "Telok Blangah (CC28)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Blangah Rise Primary School"],
+    "intlSchools": ["ISS International School (Preston)"],
+    "rentalYieldPct": 3.3
+  },
+  "Skypark Residences": {
+    "mrt": "Sembawang (NS11)",
+    "mrtWalkMins": 10,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Sembawang Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 4.2
+  },
+  "Skysuites @ Anson": {
+    "mrt": "Tanjong Pagar (EW15)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "24hr security"],
+    "schools1km": ["Cantonment Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.5
+  },
+  "Soleil @ Sinaran": {
+    "mrt": "Novena (NS20)",
+    "mrtWalkMins": 3,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["St Joseph's Institution Junior"],
+    "intlSchools": ["San Yu Adventist School"],
+    "rentalYieldPct": 3.3
+  },
+  "Sommerville Park": {
+    "mrt": "Farrer Road (CC20)",
+    "mrtWalkMins": 12,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Playground", "24hr security"],
+    "schools1km": ["Nanyang Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 2.8
+  },
+  "Sophia Hills": {
+    "mrt": "Dhoby Ghaut (NS24/NE6/CC1)",
+    "mrtWalkMins": 6,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["St. Margaret's School (Primary)"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.2
+  },
+  "South Beach Residences": {
+    "mrt": "Esplanade (CC3)",
+    "mrtWalkMins": 4,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "24hr security", "Concierge"],
+    "schools1km": ["Stamford Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 2.8
+  },
+  "Spanish Village": {
+    "mrt": "Farrer Road (CC20)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Playground", "24hr security"],
+    "schools1km": ["Nanyang Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 2.8
+  },
+  "Spottiswoode Residences": {
+    "mrt": "Cantonment (CC31)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "24hr security"],
+    "schools1km": ["Cantonment Primary School", "CHIJ (Kellock)"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.3
+  },
+  "St Regis Residences": {
+    "mrt": "Orchard Boulevard (TE13)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "Function room", "BBQ pits", "24hr security", "Concierge"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 2.4
+  },
+  "Stirling Residences": {
+    "mrt": "Queenstown (EW19)",
+    "mrtWalkMins": 3,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Queenstown Primary School"],
+    "intlSchools": ["Tanglin Trust School"],
+    "rentalYieldPct": 3.8
+  },
+  "Sturdee Residences": {
+    "mrt": "Farrer Park (NE8)",
+    "mrtWalkMins": 6,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Farrer Park Primary School"],
+    "intlSchools": ["Stamford American International School"],
+    "rentalYieldPct": 3.7
+  },
+  "Summerdale": {
+    "mrt": "Lakeside (EW26)",
+    "mrtWalkMins": 14,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Boon Lay Garden Primary School"],
+    "intlSchools": ["Canadian International School (Lakeside)"],
+    "rentalYieldPct": 4.2
+  },
+  "Sunglade": {
+    "mrt": "Serangoon (NE12/CC13)",
+    "mrtWalkMins": 8,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["St. Gabriel's Primary School", "Zhonghua Primary School"],
+    "intlSchools": ["Australian International School"],
+    "rentalYieldPct": 3.6
+  },
+  "Symphony Suites": {
+    "mrt": "Yishun (NS13)",
+    "mrtWalkMins": 18,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 4.3
+  },
+  "Tanglin Park": {
+    "mrt": "Napier (TE12)",
+    "mrtWalkMins": 9,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 2.7
+  },
+  "Tanglin View": {
+    "mrt": "Redhill (EW18)",
+    "mrtWalkMins": 8,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Alexandra Primary School"],
+    "intlSchools": ["Tanglin Trust School", "ISS International School (Preston)"],
+    "rentalYieldPct": 3.5
+  },
+  "Terrasse": {
+    "mrt": "Kovan (NE13)",
+    "mrtWalkMins": 16,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": ["DPS International School"],
+    "rentalYieldPct": 3.8
+  },
+  "The Alps Residences": {
+    "mrt": "Tampines West (DT31)",
+    "mrtWalkMins": 18,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": ["United World College of South East Asia (East)"],
+    "rentalYieldPct": 4.0
+  },
+  "The Anchorage": {
+    "mrt": "Queenstown (EW19)",
+    "mrtWalkMins": 12,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Queenstown Primary School"],
+    "intlSchools": ["Tanglin Trust School"],
+    "rentalYieldPct": 3.4
+  },
+  "The Arte": {
+    "mrt": "Toa Payoh (NS19)",
+    "mrtWalkMins": 15,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["CHIJ Primary (Toa Payoh)"],
+    "intlSchools": ["San Yu Adventist School"],
+    "rentalYieldPct": 3.3
+  },
+  "The Avenir": {
+    "mrt": "Great World (TE15)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "24hr security", "Concierge"],
+    "schools1km": ["River Valley Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 2.8
+  },
+  "The Azure": {
+    "mrt": "HarbourFront (NE1/CC29)",
+    "mrtWalkMins": 35,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Function room", "24hr security"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 2.6
+  },
+  "The Bayshore": {
+    "mrt": "Bayshore (TE29)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "Tennis court", "Squash court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Temasek Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.8
+  },
+  "The Beacon": {
+    "mrt": "Cantonment (CC31)",
+    "mrtWalkMins": 4,
+    "facilities": ["Pool", "Gym", "BBQ pits", "Playground", "24hr security"],
+    "schools1km": ["Cantonment Primary School", "CHIJ (Kellock)"],
+    "intlSchools": [],
+    "rentalYieldPct": 3.6
+  },
+  "The Brownstone": {
+    "mrt": "Canberra (NS12)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Wellington Primary School"],
+    "intlSchools": [],
+    "rentalYieldPct": 4.2
+  },
+  "The Calrose": {
+    "mrt": "Yio Chu Kang (NS15)",
+    "mrtWalkMins": 12,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Anderson Primary School"],
+    "intlSchools": ["Lycee Francais de Singapour"],
+    "rentalYieldPct": 3.3
+  },
+  "The Cascadia": {
+    "mrt": "King Albert Park (DT6)",
+    "mrtWalkMins": 5,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Methodist Girls' School (Primary)", "Pei Hwa Presbyterian Primary School"],
+    "intlSchools": ["Swiss School Singapore", "Hollandse School"],
+    "rentalYieldPct": 3.0
+  },
+  "The Centris": {
+    "mrt": "Boon Lay (EW27)",
+    "mrtWalkMins": 3,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 4.2
+  },
+  "The Clement Canopy": {
+    "mrt": "Clementi (EW23)",
+    "mrtWalkMins": 18,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "Playground", "24hr security"],
+    "schools1km": ["Nan Hua Primary School"],
+    "intlSchools": ["The Japanese School Singapore (Clementi)", "NPS International School"],
+    "rentalYieldPct": 3.7
+  },
+  "The Clift": {
+    "mrt": "Telok Ayer (DT18)",
+    "mrtWalkMins": 3,
+    "facilities": ["Pool", "Gym", "BBQ pits", "24hr security"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 3.6
+  },
+  "The Coast at Sentosa Cove": {
+    "mrt": "HarbourFront (NE1/CC29)",
+    "mrtWalkMins": 35,
+    "facilities": ["Pool", "Gym", "Tennis court", "BBQ pits", "Function room", "24hr security"],
+    "schools1km": [],
+    "intlSchools": [],
+    "rentalYieldPct": 2.5
+  }
+}

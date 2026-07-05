@@ -15,6 +15,10 @@ import {
   FACINGS,
   FLOOR_BANDS,
   STATUS_LABELS,
+  defaultAreaBasis,
+  harmonizedPsf,
+  harmonizedSqft,
+  psf,
   type Viewing,
   type ViewingStatus,
 } from "@/lib/types";
@@ -166,6 +170,15 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
                       area: entry.area,
                       tenure: entry.tenure,
                       topYear: entry.top,
+                      areaBasis: defaultAreaBasis(entry.top),
+                      condoMeta: {
+                        mrt: entry.mrt,
+                        mrtWalkMins: entry.mrtWalkMins,
+                        facilities: entry.facilities,
+                        schools1km: entry.schools1km,
+                        intlSchools: entry.intlSchools,
+                        rentalYieldPct: entry.rentalYieldPct,
+                      },
                     }
                   : { condoName: name }
               )
@@ -177,6 +190,29 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
             Linked: D{viewing.district} · {viewing.area} · {viewing.tenure} · TOP {viewing.topYear}
           </div>
         )}
+        {viewing.condoMeta && (viewing.condoMeta.mrt || viewing.condoMeta.facilities?.length) ? (
+          <div className="metabox">
+            <div className="lbl">Auto-filled property info (indicative — verify on site)</div>
+            {viewing.condoMeta.mrt && (
+              <div className="metarow">
+                🚇 <strong>{viewing.condoMeta.mrt}</strong>
+                {viewing.condoMeta.mrtWalkMins ? ` · ~${viewing.condoMeta.mrtWalkMins} min walk` : ""}
+              </div>
+            )}
+            {viewing.condoMeta.rentalYieldPct ? (
+              <div className="metarow">📈 Indicative gross rental yield ~{viewing.condoMeta.rentalYieldPct}%</div>
+            ) : null}
+            {viewing.condoMeta.facilities?.length ? (
+              <div className="metarow">🏊 {viewing.condoMeta.facilities.join(" · ")}</div>
+            ) : null}
+            {viewing.condoMeta.schools1km?.length ? (
+              <div className="metarow">🏫 Within 1km: {viewing.condoMeta.schools1km.join(", ")}</div>
+            ) : null}
+            {viewing.condoMeta.intlSchools?.length ? (
+              <div className="metarow">🌍 Intl/private nearby: {viewing.condoMeta.intlSchools.join(", ")}</div>
+            ) : null}
+          </div>
+        ) : null}
         <div className="row2">
           <label className="field">
             <span className="lbl">Block</span>
@@ -273,9 +309,58 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
             />
           </label>
         </div>
+        {viewing.sizeSqft ? (
+          <div className="field">
+            <span className="lbl">
+              Listed area convention{" "}
+              <span title="Since 1 Jun 2023 (GFA harmonization), strata area excludes AC ledges and voids. Older projects include them — typically 4-7% of the listed area, sometimes 10%+ with planters/bay windows.">
+                ⓘ
+              </span>
+            </span>
+            <ChipGroup
+              options={[
+                { value: "pre2023", label: "Pre-harmonization (incl. AC ledge)" },
+                { value: "post2023", label: "Post-2023 (harmonized)" },
+              ]}
+              value={viewing.areaBasis ?? "pre2023"}
+              onChange={(v) => update({ areaBasis: (v || "pre2023") as Viewing["areaBasis"] })}
+            />
+            {(viewing.areaBasis ?? "pre2023") === "pre2023" && (
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 8 }}>
+                <span className="muted" style={{ fontSize: 12.5 }}>
+                  Conversion factor ÷
+                </span>
+                <input
+                  type="number"
+                  step="0.01"
+                  min="1"
+                  max="1.2"
+                  inputMode="decimal"
+                  style={{ width: 90 }}
+                  value={viewing.harmFactor ?? 1.07}
+                  onChange={(e) =>
+                    update({ harmFactor: e.target.value ? Number(e.target.value) : undefined })
+                  }
+                />
+                <span className="muted" style={{ fontSize: 12.5 }}>
+                  ≈ {harmonizedSqft(viewing)?.toLocaleString()} sqft harmonized
+                </span>
+              </div>
+            )}
+          </div>
+        ) : null}
         {viewing.askingPrice && viewing.sizeSqft ? (
-          <div className="muted">
-            ≈ ${Math.round(viewing.askingPrice / viewing.sizeSqft).toLocaleString()} psf
+          <div className="metabox" style={{ marginTop: 4 }}>
+            <div className="metarow">
+              💵 ${Math.round(viewing.askingPrice / viewing.sizeSqft).toLocaleString()} psf as
+              listed
+            </div>
+            {harmonizedPsf(viewing) !== psf(viewing) && (
+              <div className="metarow">
+                ⚖️ <strong>${harmonizedPsf(viewing)?.toLocaleString()} psf harmonized</strong> —
+                use this to compare against post-2023 projects
+              </div>
+            )}
           </div>
         ) : null}
         <div className="field">

@@ -534,6 +534,19 @@ table.compare td .colname {
   font-weight: 700;
 }
 
+/* ---------- Auto-filled property info ---------- */
+.metabox {
+  background: var(--brand-50);
+  border: 1px solid var(--brand-100);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin: 8px 0;
+}
+.metabox .metarow {
+  font-size: 13px;
+  padding: 3px 0;
+}
+
 /* ---------- Misc ---------- */
 .banner {
   background: var(--brand-100);

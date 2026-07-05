@@ -19,7 +19,8 @@ export default function PhotoGrid({
   const mine = photos.filter((p) => p.sectionId === sectionId);
   const [srcs, setSrcs] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const cameraRef = useRef<HTMLInputElement>(null);
+  const galleryRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     let live = true;
@@ -53,7 +54,8 @@ export default function PhotoGrid({
       onChange([...photos, ...added]);
     } finally {
       setBusy(false);
-      if (inputRef.current) inputRef.current.value = "";
+      if (cameraRef.current) cameraRef.current.value = "";
+      if (galleryRef.current) galleryRef.current.value = "";
     }
   }
 
@@ -78,17 +80,35 @@ export default function PhotoGrid({
       <button
         type="button"
         className="addphoto"
-        onClick={() => inputRef.current?.click()}
+        onClick={() => cameraRef.current?.click()}
         disabled={busy}
-        aria-label="Add photo"
+        aria-label="Take photo with camera"
+        title="Take photo"
       >
         {busy ? "…" : "📷"}
       </button>
+      <button
+        type="button"
+        className="addphoto"
+        onClick={() => galleryRef.current?.click()}
+        disabled={busy}
+        aria-label="Upload photos from gallery"
+        title="Upload from gallery"
+      >
+        {busy ? "…" : "🖼️"}
+      </button>
       <input
-        ref={inputRef}
+        ref={cameraRef}
         type="file"
         accept="image/*"
         capture="environment"
+        hidden
+        onChange={(e) => onFiles(e.target.files)}
+      />
+      <input
+        ref={galleryRef}
+        type="file"
+        accept="image/*"
         multiple
         hidden
         onChange={(e) => onFiles(e.target.files)}
