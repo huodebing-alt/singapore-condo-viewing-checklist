@@ -56,6 +56,16 @@ Open http://localhost:3000. Without cloud storage configured, everything is save
 4. Redeploy. Sign in with the default account; change the password from the 👤 Account page.
 5. If you logged viewings on a phone before connecting the store, the home screen offers a one-tap **"Upload to cloud"** migration into your account.
 
+### URA market data (optional, recommended)
+
+The 📊 Market data card on each viewing shows the last 12 months of actual transactions for the linked project (similar sizes, with estimated layout, floor range, price and PSF), compares the asking PSF against the 12-month median, and ranks nearby same-district projects by transaction activity with their median PSF/price. Data comes from the official [URA Data Service](https://eservice.ura.gov.sg/maps/api/):
+
+1. Register for a free access key at [eservice.ura.gov.sg/maps/api](https://eservice.ura.gov.sg/maps/api/) (emailed on activation).
+2. Add `URA_ACCESS_KEY` to Vercel env vars and redeploy.
+3. The first market query builds a cached 12-month dataset; a weekly Vercel cron (`vercel.json`) keeps it fresh. Optionally set `CRON_SECRET` so the cron endpoint is authenticated.
+
+Note: live "units for sale" listing counts aren't available from any public API (that data belongs to the listing portals), so nearby projects show completed-transaction activity instead.
+
 ### Google sign-in (optional)
 
 1. In [Google Cloud Console](https://console.cloud.google.com/apis/credentials) create an **OAuth client ID** (type: Web application) and add your deployment URL to *Authorized JavaScript origins*.

@@ -26,6 +26,7 @@ import { deleteViewing, saveViewing } from "@/lib/store";
 import { prefillAnswers } from "@/lib/prefill";
 import ChipGroup from "./ChipGroup";
 import CondoSearch from "./CondoSearch";
+import MarketCard from "./MarketCard";
 import PhotoGrid from "./PhotoGrid";
 import ScoreBadge from "./ScoreBadge";
 
@@ -406,6 +407,14 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
           />
         </label>
       </div>
+
+      {/* Market data from URA */}
+      <MarketCard
+        condoName={viewing.condoName}
+        district={viewing.district}
+        sqft={viewing.sizeSqft}
+        askingPrice={viewing.askingPrice}
+      />
 
       {/* Checklist */}
       <h2 className="pagetitle">Checklist</h2>
