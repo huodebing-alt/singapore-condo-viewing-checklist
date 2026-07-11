@@ -1,0 +1,897 @@
+[
+ {
+  "name": "Skywaters Residences",
+  "district": 1,
+  "area": "Shenton Way",
+  "tenure": "99-year leasehold",
+  "top": 2028,
+  "mrt": "Shenton Way (TE19)",
+  "mrtWalkMins": 3,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky gardens",
+   "Private dining",
+   "Concierge",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 2.6,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "yes"
+ },
+ {
+  "name": "Marina View Residences",
+  "district": 1,
+  "area": "Marina View",
+  "tenure": "99-year leasehold",
+  "top": 2028,
+  "mrt": "Shenton Way (TE19)",
+  "mrtWalkMins": 2,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terraces",
+   "Function room",
+   "Concierge",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 2.7,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "yes"
+ },
+ {
+  "name": "One Marina Gardens",
+  "district": 1,
+  "area": "Marina South",
+  "tenure": "99-year leasehold",
+  "top": 2029,
+  "mrt": "Marina South (TE22)",
+  "mrtWalkMins": 3,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky gardens",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
+ },
+ {
+  "name": "Union Square Residences",
+  "district": 1,
+  "area": "Havelock / Clarke Quay",
+  "tenure": "99-year leasehold",
+  "top": 2028,
+  "mrt": "Clarke Quay (NE5)",
+  "mrtWalkMins": 6,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terrace",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 3,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
+ },
+ {
+  "name": "One Bernam",
+  "district": 2,
+  "area": "Tanjong Pagar",
+  "tenure": "99-year leasehold",
+  "top": 2025,
+  "mrt": "Tanjong Pagar (EW15)",
+  "mrtWalkMins": 3,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky garden",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Cantonment Primary School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "yes"
+ },
+ {
+  "name": "Newport Residences",
+  "district": 2,
+  "area": "Anson / Tanjong Pagar",
+  "tenure": "Freehold",
+  "top": 2030,
+  "mrt": "Tanjong Pagar (EW15)",
+  "mrtWalkMins": 6,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terraces",
+   "Private dining",
+   "Concierge",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Cantonment Primary School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "yes"
+ },
+ {
+  "name": "TMW Maxwell",
+  "district": 2,
+  "area": "Maxwell / Chinatown",
+  "tenure": "99-year leasehold",
+  "top": 2028,
+  "mrt": "Maxwell (TE18)",
+  "mrtWalkMins": 2,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terrace",
+   "Co-working lounge",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Cantonment Primary School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 3.1,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "yes"
+ },
+ {
+  "name": "Eon Shenton",
+  "district": 2,
+  "area": "Shenton Way",
+  "tenure": "99-year leasehold",
+  "top": 2017,
+  "mrt": "Shenton Way (TE19)",
+  "mrtWalkMins": 3,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terrace",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Cantonment Primary School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
+ },
+ {
+  "name": "Onze @ Tanjong Pagar",
+  "district": 2,
+  "area": "Tanjong Pagar",
+  "tenure": "Freehold",
+  "top": 2021,
+  "mrt": "Tanjong Pagar (EW15)",
+  "mrtWalkMins": 8,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "BBQ pits",
+   "Sky terrace",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Cantonment Primary School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 3.3,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
+ },
+ {
+  "name": "Spottiswoode 18",
+  "district": 2,
+  "area": "Spottiswoode Park",
+  "tenure": "Freehold",
+  "top": 2014,
+  "mrt": "Cantonment (CC31)",
+  "mrtWalkMins": 5,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terrace",
+   "BBQ pits",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Cantonment Primary School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
+ },
+ {
+  "name": "The Landmark",
+  "district": 3,
+  "area": "Chin Swee / Pearl's Hill",
+  "tenure": "99-year leasehold",
+  "top": 2025,
+  "mrt": "Chinatown (NE4/DT19)",
+  "mrtWalkMins": 9,
+  "facilities": [
+   "Infinity pool",
+   "Gym",
+   "Sky terraces",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "yes"
+ },
+ {
+  "name": "Emerald Park",
+  "district": 3,
+  "area": "Indus Road / Tiong Bahru",
+  "tenure": "99-year leasehold",
+  "top": 1993,
+  "mrt": "Havelock (TE16)",
+  "mrtWalkMins": 4,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Tennis court",
+   "BBQ pits",
+   "Playground",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Zhangde Primary School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "no"
+ },
+ {
+  "name": "The Reef at King's Dock",
+  "district": 4,
+  "area": "Harbourfront",
+  "tenure": "99-year leasehold",
+  "top": 2025,
+  "mrt": "HarbourFront (NE1/CC29)",
+  "mrtWalkMins": 6,
+  "facilities": [
+   "Floating deck pool",
+   "Gym",
+   "BBQ pits",
+   "Function room",
+   "Marine viewing deck",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
+ },
+ {
+  "name": "The Residences at W Singapore Sentosa Cove",
+  "district": 4,
+  "area": "Sentosa Cove",
+  "tenure": "99-year leasehold",
+  "top": 2011,
+  "mrt": "HarbourFront (NE1/CC29)",
+  "mrtWalkMins": 30,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Concierge",
+   "Hotel services",
+   "BBQ pits",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 2.6,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
+ },
+ {
+  "name": "Seven Palms Sentosa Cove",
+  "district": 4,
+  "area": "Sentosa Cove",
+  "tenure": "99-year leasehold",
+  "top": 2014,
+  "mrt": "HarbourFront (NE1/CC29)",
+  "mrtWalkMins": 30,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Beachfront access",
+   "Concierge",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 2.4,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "planned"
+ },
+ {
+  "name": "The Berth by the Cove",
+  "district": 4,
+  "area": "Sentosa Cove",
+  "tenure": "99-year leasehold",
+  "top": 2006,
+  "mrt": "HarbourFront (NE1/CC29)",
+  "mrtWalkMins": 25,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Tennis court",
+   "BBQ pits",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 2.8,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "no"
+ },
+ {
+  "name": "The Pearl @ Mount Faber",
+  "district": 4,
+  "area": "Mount Faber / Telok Blangah",
+  "tenure": "99-year leasehold",
+  "top": 2004,
+  "mrt": "HarbourFront (NE1/CC29)",
+  "mrtWalkMins": 15,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Tennis court",
+   "BBQ pits",
+   "Playground",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Radin Mas Primary School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "no"
+ },
+ {
+  "name": "Clavon",
+  "district": 5,
+  "area": "Clementi",
+  "tenure": "99-year leasehold",
+  "top": 2025,
+  "mrt": "Clementi (EW23)",
+  "mrtWalkMins": 12,
+  "facilities": [
+   "Lap pool",
+   "Gym",
+   "Tennis court",
+   "BBQ pits",
+   "Function rooms",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Nan Hua Primary School"
+  ],
+  "intlSchools": [
+   "The Japanese School Singapore (Clementi)"
+  ],
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
+ },
+ {
+  "name": "Elta",
+  "district": 5,
+  "area": "Clementi",
+  "tenure": "99-year leasehold",
+  "top": 2028,
+  "mrt": "Clementi (EW23)",
+  "mrtWalkMins": 11,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terraces",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Nan Hua Primary School"
+  ],
+  "intlSchools": [
+   "The Japanese School Singapore (Clementi)"
+  ],
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
+ },
+ {
+  "name": "One-North Eden",
+  "district": 5,
+  "area": "One-North",
+  "tenure": "99-year leasehold",
+  "top": 2025,
+  "mrt": "one-north (CC23)",
+  "mrtWalkMins": 7,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "BBQ pits",
+   "Function room",
+   "Co-working lounge",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Fairfield Methodist School (Primary)"
+  ],
+  "intlSchools": [
+   "Tanglin Trust School",
+   "Dover Court International School"
+  ],
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
+ },
+ {
+  "name": "Blossoms by the Park",
+  "district": 5,
+  "area": "One-North",
+  "tenure": "99-year leasehold",
+  "top": 2026,
+  "mrt": "Buona Vista (EW21/CC22)",
+  "mrtWalkMins": 6,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terrace",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Fairfield Methodist School (Primary)"
+  ],
+  "intlSchools": [
+   "Tanglin Trust School",
+   "Dover Court International School"
+  ],
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
+ },
+ {
+  "name": "The Hill @ One-North",
+  "district": 5,
+  "area": "One-North",
+  "tenure": "99-year leasehold",
+  "top": 2027,
+  "mrt": "Buona Vista (EW21/CC22)",
+  "mrtWalkMins": 7,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "BBQ pits",
+   "Function room",
+   "Co-working lounge",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Fairfield Methodist School (Primary)"
+  ],
+  "intlSchools": [
+   "Tanglin Trust School"
+  ],
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "yes"
+ },
+ {
+  "name": "Bloomsbury Residences",
+  "district": 5,
+  "area": "One-North / Media Circle",
+  "tenure": "99-year leasehold",
+  "top": 2029,
+  "mrt": "one-north (CC23)",
+  "mrtWalkMins": 6,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terraces",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Fairfield Methodist School (Primary)"
+  ],
+  "intlSchools": [
+   "Tanglin Trust School"
+  ],
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
+ },
+ {
+  "name": "LyndenWoods",
+  "district": 5,
+  "area": "Science Park / Kent Ridge",
+  "tenure": "99-year leasehold",
+  "top": 2029,
+  "mrt": "Kent Ridge (CC24)",
+  "mrtWalkMins": 5,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "BBQ pits",
+   "Function room",
+   "Co-working lounge",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [
+   "Tanglin Trust School"
+  ],
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
+ },
+ {
+  "name": "Terra Hill",
+  "district": 5,
+  "area": "Pasir Panjang",
+  "tenure": "Freehold",
+  "top": 2026,
+  "mrt": "Pasir Panjang (CC26)",
+  "mrtWalkMins": 4,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terraces",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 3.2,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
+ },
+ {
+  "name": "The Verandah Residences",
+  "district": 5,
+  "area": "Pasir Panjang",
+  "tenure": "Freehold",
+  "top": 2021,
+  "mrt": "Haw Par Villa (CC25)",
+  "mrtWalkMins": 6,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
+ },
+ {
+  "name": "Carabelle",
+  "district": 5,
+  "area": "West Coast",
+  "tenure": "956-year leasehold",
+  "top": 2009,
+  "mrt": "Clementi (EW23)",
+  "mrtWalkMins": 16,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Tennis court",
+   "BBQ pits",
+   "Playground",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Qifa Primary School"
+  ],
+  "intlSchools": [
+   "The Japanese School Singapore (Clementi)"
+  ],
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "no"
+ },
+ {
+  "name": "The Infiniti",
+  "district": 5,
+  "area": "West Coast",
+  "tenure": "Freehold",
+  "top": 2008,
+  "mrt": "Clementi (EW23)",
+  "mrtWalkMins": 15,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "BBQ pits",
+   "Playground",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Qifa Primary School"
+  ],
+  "intlSchools": [
+   "The Japanese School Singapore (Clementi)"
+  ],
+  "rentalYieldPct": 3.4,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ample",
+  "evCharging": "no"
+ },
+ {
+  "name": "The Vision",
+  "district": 5,
+  "area": "West Coast",
+  "tenure": "99-year leasehold",
+  "top": 2014,
+  "mrt": "Clementi (EW23)",
+  "mrtWalkMins": 17,
+  "facilities": [
+   "Lap pool",
+   "Gym",
+   "Tennis court",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Qifa Primary School"
+  ],
+  "intlSchools": [
+   "The Japanese School Singapore (Clementi)"
+  ],
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
+ },
+ {
+  "name": "The M",
+  "district": 7,
+  "area": "Middle Road / Bugis",
+  "tenure": "99-year leasehold",
+  "top": 2023,
+  "mrt": "Bugis (EW12/DT14)",
+  "mrtWalkMins": 4,
+  "facilities": [
+   "Lap pool",
+   "Gym",
+   "Sky terrace",
+   "BBQ pits",
+   "Co-working lounge",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Stamford Primary School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "yes"
+ },
+ {
+  "name": "Aurea",
+  "district": 7,
+  "area": "Beach Road / Golden Mile",
+  "tenure": "99-year leasehold",
+  "top": 2029,
+  "mrt": "Nicoll Highway (CC5)",
+  "mrtWalkMins": 6,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terraces",
+   "Private dining",
+   "Concierge",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 3.1,
+  "maintFeeBand": "high",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "yes"
+ },
+ {
+  "name": "Southbank",
+  "district": 7,
+  "area": "North Bridge Road / Kallang",
+  "tenure": "99-year leasehold",
+  "top": 2010,
+  "mrt": "Lavender (EW11)",
+  "mrtWalkMins": 6,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Sky terrace",
+   "BBQ pits",
+   "24hr security"
+  ],
+  "schools1km": [],
+  "intlSchools": [],
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
+ },
+ {
+  "name": "Cityscape @ Farrer Park",
+  "district": 8,
+  "area": "Farrer Park",
+  "tenure": "Freehold",
+  "top": 2015,
+  "mrt": "Farrer Park (NE8)",
+  "mrtWalkMins": 5,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "Tennis court",
+   "BBQ pits",
+   "Function room",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Farrer Park Primary School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "ok",
+  "evCharging": "planned"
+ },
+ {
+  "name": "1953",
+  "district": 8,
+  "area": "Tessensohn / Balestier fringe",
+  "tenure": "Freehold",
+  "top": 2023,
+  "mrt": "Boon Keng (NE9)",
+  "mrtWalkMins": 9,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "BBQ pits",
+   "Roof terrace",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Hong Wen School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 3.5,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "yes"
+ },
+ {
+  "name": "The Citron Residences",
+  "district": 8,
+  "area": "Farrer Park / Marne Road",
+  "tenure": "Freehold",
+  "top": 2016,
+  "mrt": "Farrer Park (NE8)",
+  "mrtWalkMins": 4,
+  "facilities": [
+   "Pool",
+   "Gym",
+   "BBQ pits",
+   "Sky terrace",
+   "24hr security"
+  ],
+  "schools1km": [
+   "Farrer Park Primary School"
+  ],
+  "intlSchools": [],
+  "rentalYieldPct": 3.6,
+  "maintFeeBand": "medium",
+  "enbloc": "none",
+  "carpark": "tight",
+  "evCharging": "planned"
+ }
+]
