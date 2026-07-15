@@ -13,22 +13,6 @@ import {
 import { STATUS_LABELS, fmtPrice, harmonizedPsf, harmonizedSqft, psf, type Viewing } from "@/lib/types";
 import { getDoc, listViewings } from "@/lib/store";
 
-declare global {
-  interface Window {
-    google?: {
-      accounts: {
-        oauth2: {
-          initTokenClient: (config: {
-            client_id: string;
-            scope: string;
-            callback: (resp: { access_token?: string; error?: string }) => void;
-          }) => { requestAccessToken: () => void };
-        };
-      };
-    };
-  }
-}
-
 const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
 
 export default function ComparePage() {

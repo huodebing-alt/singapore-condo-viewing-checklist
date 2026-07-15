@@ -5,19 +5,6 @@ import { useRouter } from "next/navigation";
 import TopBar from "@/components/TopBar";
 import { setGuest } from "@/lib/store";
 
-declare global {
-  interface Window {
-    google?: {
-      accounts: {
-        id: {
-          initialize: (config: object) => void;
-          renderButton: (el: HTMLElement, config: object) => void;
-        };
-      };
-    };
-  }
-}
-
 const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
 
 export default function LoginPage() {
