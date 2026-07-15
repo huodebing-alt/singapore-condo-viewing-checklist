@@ -4,13 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   GENERAL_SECTION_ID,
-  SECTIONS,
+  effectiveSections,
   overallScore,
   scoreColor,
   sectionProgress,
   sectionScore,
 } from "@/lib/checklist";
-import type { Section } from "@/lib/checklist";
+import type { ChecklistConfig, EffectiveSection } from "@/lib/checklist";
 import {
   FACINGS,
   FLOOR_BANDS,
@@ -22,7 +22,7 @@ import {
   type Viewing,
   type ViewingStatus,
 } from "@/lib/types";
-import { deleteViewing, saveViewing } from "@/lib/store";
+import { deleteViewing, getDoc, saveViewing } from "@/lib/store";
 import { prefillAnswers } from "@/lib/prefill";
 import ChipGroup from "./ChipGroup";
 import CondoSearch from "./CondoSearch";
@@ -40,7 +40,7 @@ function SectionCard({
   viewing,
   update,
 }: {
-  section: Section;
+  section: EffectiveSection;
   viewing: Viewing;
   update: Update;
 }) {
@@ -66,7 +66,12 @@ function SectionCard({
         <div className="acc-body">
           {section.questions.map((q) => (
             <div className="q" key={q.id}>
-              <div className="qlabel">{q.label}</div>
+              <div className="qlabel">
+                {q.label}
+                {q.weight !== 1 && (
+                  <span className="muted" style={{ fontWeight: 400 }}> ×{q.weight}</span>
+                )}
+              </div>
               {q.tip && <div className="tip">💡 {q.tip}</div>}
               <ChipGroup
                 options={q.options}
@@ -113,9 +118,49 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
   const router = useRouter();
   const [viewing, setViewing] = useState<Viewing>(initial);
   const [prefilled, setPrefilled] = useState(0);
+  const [cfg, setCfg] = useState<ChecklistConfig | null>(null);
+  const [pgBusy, setPgBusy] = useState(false);
+  const [pgMsg, setPgMsg] = useState("");
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved">("idle");
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const dirty = useRef(false);
+
+  useEffect(() => {
+    getDoc<ChecklistConfig>("config").then(setCfg).catch(() => {});
+  }, []);
+
+  async function linkPropertyGuru(url: string) {
+    update({ pgUrl: url });
+    if (!/propertyguru\.com/i.test(url)) return;
+    setPgBusy(true);
+    setPgMsg("");
+    try {
+      const res = await fetch(`/api/pg?url=${encodeURIComponent(url)}`);
+      const j = await res.json();
+      if (j.blocked) {
+        setPgMsg("PropertyGuru blocked automated reading — link saved, tap to open it instead.");
+      } else if (j.ok) {
+        update((cur) => ({
+          condoName: cur.condoName || j.projectName || cur.condoName,
+          askingPrice: cur.askingPrice ?? j.price,
+          sizeSqft: cur.sizeSqft ?? j.sqft,
+          bedrooms: cur.bedrooms ?? j.beds,
+          bathrooms: cur.bathrooms ?? j.baths,
+          district: cur.district ?? j.district,
+        }));
+        const got = [j.price && "price", j.sqft && "size", j.beds && "beds", j.district && "district"]
+          .filter(Boolean)
+          .join(", ");
+        setPgMsg(got ? `Synced from listing: ${got} (only empty fields were filled).` : "Link saved.");
+      } else {
+        setPgMsg("Couldn't read the listing — link saved.");
+      }
+    } catch {
+      setPgMsg("Couldn't read the listing — link saved.");
+    } finally {
+      setPgBusy(false);
+    }
+  }
 
   const update: Update = (patch) => {
     dirty.current = true;
@@ -149,7 +194,8 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
     router.push("/");
   }
 
-  const score = overallScore(viewing.answers);
+  const score = overallScore(viewing.answers, cfg);
+  const sections = effectiveSections(cfg);
 
   return (
     <div className="shell">
@@ -259,6 +305,26 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
             />
           </label>
         </div>
+        <label className="field">
+          <span className="lbl">PropertyGuru listing link (optional)</span>
+          <input
+            type="text"
+            inputMode="url"
+            placeholder="Paste https://www.propertyguru.com.sg/listing/…"
+            value={viewing.pgUrl ?? ""}
+            onChange={(e) => update({ pgUrl: e.target.value })}
+            onBlur={(e) => e.target.value.trim() && linkPropertyGuru(e.target.value.trim())}
+          />
+        </label>
+        {pgBusy && <p className="muted">Reading listing…</p>}
+        {pgMsg && <p className="muted" style={{ marginTop: -4 }}>{pgMsg}</p>}
+        {viewing.pgUrl && /propertyguru\.com/i.test(viewing.pgUrl) && (
+          <p style={{ margin: "0 0 8px" }}>
+            <a href={viewing.pgUrl} target="_blank" rel="noreferrer" style={{ fontSize: 13 }}>
+              ↗ Open listing on PropertyGuru
+            </a>
+          </p>
+        )}
         <div className="row2">
           <label className="field">
             <span className="lbl">Viewing date</span>
@@ -418,7 +484,10 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
 
       {/* Checklist */}
       <h2 className="pagetitle">Checklist</h2>
-      <p className="muted">Tap through each section — answers are one tap, notes optional.</p>
+      <p className="muted">
+        Tap through each section — answers are one tap, notes optional.{" "}
+        <a href="/settings">Customize questions &amp; weights →</a>
+      </p>
       {prefilled > 0 && (
         <div className="banner">
           ✨ {prefilled} answer{prefilled > 1 ? "s" : ""} pre-filled from the condo database
@@ -426,7 +495,7 @@ export default function ViewingForm({ initial, isNew }: { initial: Viewing; isNe
           correct it.
         </div>
       )}
-      {SECTIONS.map((s) => (
+      {sections.map((s) => (
         <SectionCard key={s.id} section={s} viewing={viewing} update={update} />
       ))}
 

@@ -48,10 +48,16 @@ export async function saveUsers(users: StoredUser[]): Promise<void> {
   });
 }
 
-/** Load users; on first run seed the default account from env vars. */
+/** Load users; on first run seed the default account from env vars.
+ *  Dedupes by username (last write wins) — Blob listing is eventually
+ *  consistent, so back-to-back registrations can briefly double-write. */
 export async function loadUsers(): Promise<StoredUser[]> {
   const existing = await fetchUsersBlob();
-  if (existing) return existing;
+  if (existing) {
+    const byName = new Map<string, StoredUser>();
+    for (const u of existing) byName.set(u.usernameLower, u);
+    return [...byName.values()];
+  }
   const users: StoredUser[] = [];
   const defUser = process.env.DEFAULT_USER;
   const defPass = process.env.DEFAULT_PASSWORD;

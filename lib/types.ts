@@ -33,6 +33,12 @@ export type Viewing = {
   topYear?: number;
   block: string;
   unit: string;
+  /** Linked PropertyGuru listing URL */
+  pgUrl?: string;
+
+  /** Geocoded location (OneMap), cached after first map render */
+  lat?: number;
+  lng?: number;
 
   // Auto-populated metrics snapshot from the condo database (editable-free,
   // indicative data: nearest MRT, facilities, schools, yield)

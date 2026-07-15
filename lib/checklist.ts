@@ -624,30 +624,112 @@ export function optionFor(qId: string, value: string): Option | undefined {
   return q?.options.find((o) => o.value === value);
 }
 
-/** Section score as 0-100, or null if nothing scored yet. */
+// ---------- User configuration ----------
+// Users can hide questions, reword them, edit options/scores, add custom
+// questions, and give each question an importance weight. Stored per user.
+
+export type QuestionOverride = {
+  label?: string;
+  hidden?: boolean;
+  weight?: number; // 0.5 minor · 1 standard · 2 important · 3 critical
+  options?: Option[];
+};
+
+export type CustomQuestion = {
+  id: string; // "cq_..."
+  sectionId: string;
+  label: string;
+  options: Option[];
+  weight?: number;
+};
+
+export type ChecklistConfig = {
+  overrides?: Record<string, QuestionOverride>;
+  custom?: CustomQuestion[];
+};
+
+export const WEIGHT_OPTIONS = [
+  { value: 0.5, label: "Minor ×0.5" },
+  { value: 1, label: "Standard ×1" },
+  { value: 2, label: "Important ×2" },
+  { value: 3, label: "Critical ×3" },
+];
+
+/** SECTIONS with user overrides applied: hidden removed, labels/options
+ *  replaced, custom questions appended. Question objects carry weight. */
+export type EffectiveQuestion = Question & { weight: number; custom?: boolean };
+export type EffectiveSection = Omit<Section, "questions"> & { questions: EffectiveQuestion[] };
+
+export function effectiveSections(cfg?: ChecklistConfig | null): EffectiveSection[] {
+  return SECTIONS.map((s) => {
+    const questions: EffectiveQuestion[] = [];
+    for (const q of s.questions) {
+      const ov = cfg?.overrides?.[q.id];
+      if (ov?.hidden) continue;
+      questions.push({
+        ...q,
+        label: ov?.label ?? q.label,
+        options: ov?.options ?? q.options,
+        weight: ov?.weight ?? 1,
+      });
+    }
+    for (const cq of cfg?.custom ?? []) {
+      if (cq.sectionId !== s.id) continue;
+      questions.push({
+        id: cq.id,
+        label: cq.label,
+        options: cq.options,
+        weight: cq.weight ?? 1,
+        custom: true,
+      });
+    }
+    return { id: s.id, title: s.title, emoji: s.emoji, questions };
+  });
+}
+
+/** Weighted section score 0-100. Unanswered scored questions count at the
+ *  midpoint of their scale; questions answered with an unscored option
+ *  (N/A, informational) are excluded. Null when the section has no scorable
+ *  questions. */
 export function sectionScore(
-  section: Section,
+  section: Section | EffectiveSection,
   answers: Record<string, string>
 ): number | null {
   let got = 0;
   let max = 0;
   for (const q of section.questions) {
+    const scores = q.options.map((o) => o.score).filter((s): s is number => s !== undefined);
+    if (!scores.length) continue; // informational question
+    const maxOpt = Math.max(...scores);
+    if (maxOpt <= 0) continue;
+    const w = (q as EffectiveQuestion).weight ?? 1;
     const v = answers[q.id];
-    if (!v) continue;
-    const opt = q.options.find((o) => o.value === v);
-    if (opt?.score === undefined) continue;
-    got += opt.score;
-    max += 3;
+    if (v) {
+      const opt = q.options.find((o) => o.value === v);
+      if (opt?.score === undefined) continue; // N/A → not applicable, excluded
+      got += opt.score * w;
+      max += maxOpt * w;
+    } else {
+      got += (maxOpt / 2) * w; // unanswered → neutral midpoint
+      max += maxOpt * w;
+    }
   }
   if (max === 0) return null;
   return Math.round((got / max) * 100);
 }
 
-/** Overall score: average of section scores that have data. */
-export function overallScore(answers: Record<string, string>): number | null {
-  const scores = SECTIONS.map((s) => sectionScore(s, answers)).filter(
-    (s): s is number => s !== null
-  );
+/** Overall score: average of section scores. Null until at least one
+ *  question anywhere has been answered (so empty viewings show "—", not 50). */
+export function overallScore(
+  answers: Record<string, string>,
+  cfg?: ChecklistConfig | null
+): number | null {
+  const sections = effectiveSections(cfg);
+  const anyAnswered = sections.some((s) => s.questions.some((q) => answers[q.id]));
+  if (!anyAnswered) return null;
+  const scores = sections
+    .map((s) => sectionScore(s, answers))
+    .filter((s): s is number => s !== null);
   if (scores.length === 0) return null;
   return Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
 }

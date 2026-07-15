@@ -2,20 +2,35 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import dynamicImport from "next/dynamic";
 import TopBar from "@/components/TopBar";
+
+const MapView = dynamicImport(() => import("@/components/MapView"), { ssr: false });
 import ScoreBadge from "@/components/ScoreBadge";
 import { overallScore } from "@/lib/checklist";
 import Link2 from "next/link";
 import { STATUS_LABELS, fmtPrice, harmonizedPsf, psf, type Viewing } from "@/lib/types";
-import { cloudConfigured, listViewings, localViewings, migrateLocalToCloud } from "@/lib/store";
+import {
+  cloudConfigured,
+  getDoc,
+  isGuest,
+  listViewings,
+  localViewings,
+  migrateLocalToCloud,
+} from "@/lib/store";
+import type { ChecklistConfig } from "@/lib/checklist";
 
 type SortKey = "newest" | "score" | "price" | "psf";
 
 export default function HomePage() {
   const [viewings, setViewings] = useState<Viewing[] | null>(null);
   const [cloud, setCloud] = useState<boolean | null>(null);
+  const [guest, setGuestState] = useState(false);
+  const [cfg, setCfg] = useState<ChecklistConfig | null>(null);
   const [localCount, setLocalCount] = useState(0);
   const [migrating, setMigrating] = useState(false);
+  const [view, setView] = useState<"list" | "map">("list");
+  const [geocoding, setGeocoding] = useState(false);
 
   const [q, setQ] = useState("");
   const [status, setStatus] = useState("");
@@ -25,16 +40,52 @@ export default function HomePage() {
   const [sort, setSort] = useState<SortKey>("newest");
 
   async function load() {
+    const g = isGuest();
+    setGuestState(g);
     const c = await cloudConfigured();
     setCloud(c);
-    const vs = await listViewings(); // redirects to /login if cloud + signed out
+    const vs = await listViewings(); // redirects to /login if cloud + signed out (non-guest)
     setViewings(vs);
-    if (c) setLocalCount((await localViewings()).length);
+    setCfg(await getDoc<ChecklistConfig>("config").catch(() => null));
+    if (c && !g) setLocalCount((await localViewings()).length);
   }
 
   useEffect(() => {
     load();
   }, []);
+
+  // Geocode viewings missing coordinates when the map opens (cached on the record)
+  useEffect(() => {
+    if (view !== "map" || !viewings) return;
+    const missing = viewings.filter((v) => v.lat === undefined && v.condoName.trim());
+    if (!missing.length) return;
+    let live = true;
+    (async () => {
+      setGeocoding(true);
+      const { saveViewing } = await import("@/lib/store");
+      for (const v of missing) {
+        try {
+          const res = await fetch(`/api/geocode?q=${encodeURIComponent(v.condoName)}`);
+          const j = await res.json();
+          if (j.found) {
+            v.lat = j.lat;
+            v.lng = j.lng;
+            await saveViewing(v);
+          }
+        } catch {
+          /* leave unpinned */
+        }
+      }
+      if (live) {
+        setViewings([...viewings]);
+        setGeocoding(false);
+      }
+    })();
+    return () => {
+      live = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [view, viewings === null]);
 
   const districts = useMemo(
     () =>
@@ -59,7 +110,7 @@ export default function HomePage() {
     if (district) list = list.filter((v) => String(v.district) === district);
     if (beds) list = list.filter((v) => String(v.bedrooms ?? "") === beds);
     if (maxPrice) list = list.filter((v) => (v.askingPrice ?? 0) <= Number(maxPrice) * 1_000_000);
-    const score = (v: Viewing) => overallScore(v.answers) ?? -1;
+    const score = (v: Viewing) => overallScore(v.answers, cfg) ?? -1;
     switch (sort) {
       case "score":
         list = [...list].sort((a, b) => score(b) - score(a));
@@ -74,7 +125,7 @@ export default function HomePage() {
         list = [...list].sort((a, b) => (b.viewingDate || "").localeCompare(a.viewingDate || ""));
     }
     return list;
-  }, [viewings, q, status, district, beds, maxPrice, sort]);
+  }, [viewings, q, status, district, beds, maxPrice, sort, cfg]);
 
   return (
     <>
@@ -89,12 +140,18 @@ export default function HomePage() {
         }
       />
       <div className="shell">
-        {cloud === false && (
+        {guest ? (
+          <div className="banner">
+            👋 Guest mode — everything is saved on this device only.{" "}
+            <a href="/login">Sign in or create an account</a> to sync to the cloud (your device
+            data uploads after signing in).
+          </div>
+        ) : cloud === false ? (
           <div className="banner">
             📱 Storing data on this device only. Add a Blob store to your Vercel project to sync
             to the cloud (see README).
           </div>
-        )}
+        ) : null}
         {cloud && localCount > 0 && (
           <div className="banner">
             ☁️ {localCount} viewing{localCount > 1 ? "s" : ""} found on this device.{" "}
@@ -114,13 +171,24 @@ export default function HomePage() {
           </div>
         )}
 
-        <input
-          type="search"
-          placeholder="Search condo, area, block or agent…"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          style={{ marginTop: 12 }}
-        />
+        <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
+          <input
+            type="search"
+            placeholder="Search condo, area, block or agent…"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            style={{ flex: 1 }}
+          />
+          <button
+            type="button"
+            className="btn ghost"
+            style={{ padding: "0 14px" }}
+            onClick={() => setView(view === "list" ? "map" : "list")}
+            aria-label="Toggle map view"
+          >
+            {view === "list" ? "🗺️ Map" : "📋 List"}
+          </button>
+        </div>
         <div className="filters">
           <select value={status} onChange={(e) => setStatus(e.target.value)}>
             <option value="">All statuses</option>
@@ -166,6 +234,17 @@ export default function HomePage() {
           <p className="muted" style={{ padding: 24, textAlign: "center" }}>
             Loading…
           </p>
+        ) : view === "map" ? (
+          <>
+            {geocoding && <p className="muted">Locating projects on the map…</p>}
+            <MapView
+              viewings={filtered}
+              scores={Object.fromEntries(filtered.map((v) => [v.id, overallScore(v.answers, cfg)]))}
+            />
+            <p className="muted" style={{ fontSize: 12 }}>
+              Pins show the overall score. Filters above apply to the map too.
+            </p>
+          </>
         ) : filtered.length === 0 ? (
           <div className="empty">
             <div className="big">🏙️</div>
@@ -182,7 +261,7 @@ export default function HomePage() {
           </div>
         ) : (
           filtered.map((v) => {
-            const s = overallScore(v.answers);
+            const s = overallScore(v.answers, cfg);
             const p = psf(v);
             return (
               <Link href={`/viewing/${v.id}`} key={v.id} className="card vcard">

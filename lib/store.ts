@@ -27,8 +27,25 @@ function toLogin(): never {
   throw new Error("not signed in");
 }
 
-/** True when the deployment has cloud storage AND the user is signed in. */
+// ---------- Guest mode ----------
+// Guests keep everything on-device (IndexedDB) even when the deployment has
+// cloud storage. Signing in later clears the flag; the home screen then
+// offers the existing one-tap "upload to cloud" migration.
+
+export function isGuest(): boolean {
+  return typeof window !== "undefined" && localStorage.getItem("cs_guest") === "1";
+}
+
+export function setGuest(on: boolean): void {
+  if (on) localStorage.setItem("cs_guest", "1");
+  else localStorage.removeItem("cs_guest");
+  health = null;
+}
+
+/** True when the deployment has cloud storage AND the user is signed in.
+ *  Guests always get false (device storage) with no login redirect. */
 export async function isCloud(): Promise<boolean> {
+  if (isGuest()) return false;
   const h = await getHealth();
   if (h.cloud && !h.authed) toLogin();
   return h.cloud;
@@ -130,6 +147,29 @@ export async function deletePhoto(
   await idb.del("photos", photo.id).catch(() => {});
 }
 
+// ---------- Per-user JSON documents (checklist config, purchase plan) ----------
+
+export async function getDoc<T>(key: string): Promise<T | null> {
+  if (await isCloud()) {
+    const res = await api(`/api/userdoc/${key}`, { cache: "no-store" });
+    if (res.ok) return res.json();
+    if (res.status === 404) return null;
+  }
+  return (await idb.get<T>("docs", key)) ?? null;
+}
+
+export async function saveDoc(key: string, value: unknown): Promise<void> {
+  if (await isCloud()) {
+    const res = await api(`/api/userdoc/${key}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(value),
+    });
+    if (res.ok) return;
+  }
+  await idb.put("docs", value, key);
+}
+
 /** Count viewings stored only on this device (for the migrate-to-cloud banner). */
 export async function localViewings(): Promise<Viewing[]> {
   try {
@@ -155,6 +195,14 @@ export async function migrateLocalToCloud(): Promise<number> {
     await saveViewing(v);
     await idb.del("viewings", v.id);
     for (const p of v.photos) await idb.del("photos", p.id).catch(() => {});
+  }
+  // Also bring over device-stored docs (checklist config, purchase plan)
+  for (const key of ["config", "purchase"]) {
+    const doc = await idb.get("docs", key).catch(() => undefined);
+    if (doc !== undefined) {
+      await saveDoc(key, doc);
+      await idb.del("docs", key).catch(() => {});
+    }
   }
   return locals.length;
 }

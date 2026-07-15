@@ -3,23 +3,34 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import TopBar from "@/components/TopBar";
-import { SECTIONS, overallScore, scoreColor, sectionScore } from "@/lib/checklist";
+import {
+  effectiveSections,
+  overallScore,
+  scoreColor,
+  sectionScore,
+  type ChecklistConfig,
+} from "@/lib/checklist";
 import { STATUS_LABELS, fmtPrice, harmonizedPsf, harmonizedSqft, psf, type Viewing } from "@/lib/types";
-import { listViewings } from "@/lib/store";
+import { getDoc, listViewings } from "@/lib/store";
 
 export default function ComparePage() {
   const [viewings, setViewings] = useState<Viewing[] | null>(null);
   const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [cfg, setCfg] = useState<ChecklistConfig | null>(null);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    listViewings().then((vs) => {
+    (async () => {
+      const c = await getDoc<ChecklistConfig>("config").catch(() => null);
+      setCfg(c);
+      const vs = await listViewings();
       const sorted = [...vs].sort(
-        (a, b) => (overallScore(b.answers) ?? -1) - (overallScore(a.answers) ?? -1)
+        (a, b) => (overallScore(b.answers, c) ?? -1) - (overallScore(a.answers, c) ?? -1)
       );
       setViewings(sorted);
       // Pre-select non-rejected viewings
       setSelected(new Set(sorted.filter((v) => v.status !== "rejected").map((v) => v.id)));
-    });
+    })();
   }, []);
 
   const chosen = useMemo(
@@ -34,6 +45,64 @@ export default function ComparePage() {
       else next.add(id);
       return next;
     });
+  }
+
+  /** Comparison as rows for CSV/TSV export (Google Sheets friendly). */
+  function exportRows(): string[][] {
+    const name = (v: Viewing) =>
+      `${v.condoName || "Unnamed"}${v.block ? ` Blk ${v.block}` : ""} ${v.unit}`.trim();
+    const rows: string[][] = [
+      ["Metric", ...chosen.map(name)],
+      ["Status", ...chosen.map((v) => STATUS_LABELS[v.status])],
+      ["Viewing date", ...chosen.map((v) => v.viewingDate ?? "")],
+      ["Overall score", ...chosen.map((v) => String(overallScore(v.answers, cfg) ?? ""))],
+      ["Asking price (S$)", ...chosen.map((v) => String(v.askingPrice ?? ""))],
+      ["PSF listed (S$)", ...chosen.map((v) => String(psf(v) ?? ""))],
+      ["PSF harmonized (S$)", ...chosen.map((v) => String(harmonizedPsf(v) ?? ""))],
+      ["Size listed (sqft)", ...chosen.map((v) => String(v.sizeSqft ?? ""))],
+      ["Size harmonized (sqft)", ...chosen.map((v) => String(harmonizedSqft(v) ?? ""))],
+      ["Beds", ...chosen.map((v) => String(v.bedrooms ?? ""))],
+      ["Baths", ...chosen.map((v) => String(v.bathrooms ?? ""))],
+      ["District", ...chosen.map((v) => (v.district ? `D${v.district}` : ""))],
+      ["Tenure", ...chosen.map((v) => v.tenure ?? "")],
+      ["TOP", ...chosen.map((v) => String(v.topYear ?? ""))],
+      ["Floor / facing", ...chosen.map((v) => [v.floorBand, v.facing].filter(Boolean).join(" · "))],
+      ["MRT", ...chosen.map((v) => v.condoMeta?.mrt ?? "")],
+      ["MRT walk (min)", ...chosen.map((v) => String(v.condoMeta?.mrtWalkMins ?? ""))],
+      ["Indicative yield (%)", ...chosen.map((v) => String(v.condoMeta?.rentalYieldPct ?? ""))],
+      ...effectiveSections(cfg).map((s) => [
+        `Score: ${s.title}`,
+        ...chosen.map((v) => String(sectionScore(s, v.answers) ?? "")),
+      ]),
+      ["Agent", ...chosen.map((v) => v.agent.name)],
+      ["Agent phone", ...chosen.map((v) => v.agent.phone)],
+      ["Agent agency", ...chosen.map((v) => v.agent.agency)],
+      ["PropertyGuru link", ...chosen.map((v) => v.pgUrl ?? "")],
+      ["Notes", ...chosen.map((v) => v.generalNotes.replace(/\s+/g, " ").trim())],
+    ];
+    return rows;
+  }
+
+  function downloadCsv() {
+    const esc = (s: string) => (/[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s);
+    const csv = exportRows()
+      .map((r) => r.map(esc).join(","))
+      .join("\n");
+    const blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `condo-comparison-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  async function copyForSheets() {
+    const tsv = exportRows()
+      .map((r) => r.map((c) => c.replace(/\t/g, " ")).join("\t"))
+      .join("\n");
+    await navigator.clipboard.writeText(tsv);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
   }
 
   if (viewings === null) {
@@ -65,7 +134,7 @@ export default function ComparePage() {
   }
 
   // ---------- Insights ----------
-  const withScore = chosen.filter((v) => overallScore(v.answers) !== null);
+  const withScore = chosen.filter((v) => overallScore(v.answers, cfg) !== null);
   const topScore = withScore[0];
   const cheapestPsf = [...chosen]
     .filter((v) => harmonizedPsf(v))
@@ -74,8 +143,8 @@ export default function ComparePage() {
     .filter((v) => harmonizedPsf(v))
     .sort(
       (a, b) =>
-        (overallScore(b.answers) as number) / (harmonizedPsf(b) as number) -
-        (overallScore(a.answers) as number) / (harmonizedPsf(a) as number)
+        (overallScore(b.answers, cfg) as number) / (harmonizedPsf(b) as number) -
+        (overallScore(a.answers, cfg) as number) / (harmonizedPsf(a) as number)
     )[0];
 
   // Best-per-row helpers
@@ -86,7 +155,7 @@ export default function ComparePage() {
     size: Math.max(...chosen.map((v) => v.sizeSqft ?? -1)),
     yield: Math.max(...chosen.map((v) => v.condoMeta?.rentalYieldPct ?? -1)),
     mrt: Math.min(...chosen.map((v) => v.condoMeta?.mrtWalkMins ?? Infinity)),
-    overall: Math.max(...chosen.map((v) => overallScore(v.answers) ?? -1)),
+    overall: Math.max(...chosen.map((v) => overallScore(v.answers, cfg) ?? -1)),
   };
 
   return (
@@ -115,9 +184,9 @@ export default function ComparePage() {
               </div>
               <span
                 className="score-pill"
-                style={{ background: scoreColor(overallScore(v.answers)) }}
+                style={{ background: scoreColor(overallScore(v.answers, cfg)) }}
               >
-                {overallScore(v.answers) ?? "—"}
+                {overallScore(v.answers, cfg) ?? "—"}
               </span>
             </label>
           ))}
@@ -131,7 +200,7 @@ export default function ComparePage() {
               {topScore && (
                 <p style={{ fontSize: 14, margin: "6px 0" }}>
                   🏆 <strong>{topScore.condoName}</strong> scores highest overall (
-                  {overallScore(topScore.answers)}/100).
+                  {overallScore(topScore.answers, cfg)}/100).
                 </p>
               )}
               {cheapestPsf && (
@@ -152,7 +221,7 @@ export default function ComparePage() {
             <div className="card">
               <h2>Overall ranking</h2>
               {withScore.map((v) => {
-                const s = overallScore(v.answers) as number;
+                const s = overallScore(v.answers, cfg) as number;
                 return (
                   <div className="rankrow" key={v.id}>
                     <div className="rname">{v.condoName || "Unnamed"}</div>
@@ -163,6 +232,32 @@ export default function ComparePage() {
                   </div>
                 );
               })}
+            </div>
+
+            {/* Export */}
+            <div className="card">
+              <h2>Export to Google Sheets</h2>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                <button type="button" className="btn ghost" onClick={copyForSheets}>
+                  {copied ? "Copied ✓ — paste into a Sheet" : "📋 Copy for Sheets"}
+                </button>
+                <button type="button" className="btn ghost" onClick={downloadCsv}>
+                  ⬇️ Download CSV
+                </button>
+                <a
+                  className="btn ghost"
+                  href="https://sheets.new"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  ↗ Open sheets.new
+                </a>
+              </div>
+              <p className="muted" style={{ fontSize: 12, marginTop: 8 }}>
+                &ldquo;Copy for Sheets&rdquo; puts the whole comparison on your clipboard — open a
+                Google Sheet and paste (Cmd/Ctrl-V). The CSV imports via File → Import.
+              </p>
             </div>
 
             {/* Side-by-side table */}
@@ -187,7 +282,7 @@ export default function ComparePage() {
                     <tr>
                       <th>Overall score</th>
                       {chosen.map((v) => {
-                        const s = overallScore(v.answers);
+                        const s = overallScore(v.answers, cfg);
                         return (
                           <td key={v.id} className={s !== null && s === best.overall ? "best" : ""}>
                             {s ?? "—"}
@@ -307,7 +402,7 @@ export default function ComparePage() {
                         </td>
                       ))}
                     </tr>
-                    {SECTIONS.map((s) => {
+                    {effectiveSections(cfg).map((s) => {
                       const rowScores = chosen.map((v) => sectionScore(s, v.answers));
                       const rowBest = Math.max(...rowScores.map((x) => x ?? -1));
                       return (

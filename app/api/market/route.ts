@@ -68,6 +68,31 @@ export async function GET(req: Request) {
     .sort((a, b) => b.count - a.count)
     .slice(0, 10);
 
+  // Monthly aggregates for the chart: last 12 calendar months, zero-filled
+  const months: string[] = [];
+  {
+    const d = new Date();
+    d.setDate(1);
+    for (let i = 11; i >= 0; i--) {
+      const m = new Date(d);
+      m.setMonth(m.getMonth() - i);
+      months.push(m.toISOString().slice(0, 7));
+    }
+  }
+  const monthly = months.map((m) => {
+    const tt = subjectSimilar.filter((t) => t.m === m);
+    return {
+      m,
+      count: tt.length,
+      avgPrice: tt.length
+        ? Math.round(tt.reduce((a, t) => a + t.price, 0) / tt.length)
+        : null,
+      avgPsf: tt.length
+        ? Math.round(tt.reduce((a, t) => a + psf(t), 0) / tt.length)
+        : null,
+    };
+  });
+
   return Response.json({
     refreshedAt: cache.refreshedAt,
     subject: subject
@@ -79,6 +104,7 @@ export async function GET(req: Request) {
           medianPsf: median(subjectSimilar.map(psf)),
           medianPrice: median(subjectSimilar.map((t) => t.price)),
           tx: subjectSimilar.slice(0, 40),
+          monthly,
         }
       : null,
     nearby,

@@ -2,7 +2,7 @@
 // app is deployed without a Blob store, and it keeps photos off localStorage.
 
 const DB_NAME = "condoscout";
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 
 function openDB(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
@@ -14,6 +14,9 @@ function openDB(): Promise<IDBDatabase> {
       }
       if (!db.objectStoreNames.contains("photos")) {
         db.createObjectStore("photos"); // key = photo id, value = dataUrl string
+      }
+      if (!db.objectStoreNames.contains("docs")) {
+        db.createObjectStore("docs"); // key = doc name ("config", "purchase"), value = JSON
       }
     };
     req.onsuccess = () => resolve(req.result);

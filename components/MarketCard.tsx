@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { fmtPrice } from "@/lib/types";
+import MarketChart, { type MonthPoint } from "./MarketChart";
 
 type Tx = { m: string; sqft: number; fl: string; price: number; sale: string };
 type Subject = {
@@ -16,6 +17,7 @@ type Subject = {
   medianPsf: number | null;
   medianPrice: number | null;
   tx: Tx[];
+  monthly?: MonthPoint[];
 };
 type Nearby = {
   project: string;
@@ -190,6 +192,8 @@ export default function MarketCard({
               sizes).
             </p>
           ) : (
+            <>
+              {data.subject.monthly && <MarketChart monthly={data.subject.monthly} />}
             <div className="tablewrap">
               <table className="compare">
                 <thead>
@@ -220,6 +224,7 @@ export default function MarketCard({
                 </tbody>
               </table>
             </div>
+            </>
           )}
 
           <h2 style={{ marginTop: 12 }}>
