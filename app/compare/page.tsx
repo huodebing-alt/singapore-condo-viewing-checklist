@@ -13,11 +13,31 @@ import {
 import { STATUS_LABELS, fmtPrice, harmonizedPsf, harmonizedSqft, psf, type Viewing } from "@/lib/types";
 import { getDoc, listViewings } from "@/lib/store";
 
+declare global {
+  interface Window {
+    google?: {
+      accounts: {
+        oauth2: {
+          initTokenClient: (config: {
+            client_id: string;
+            scope: string;
+            callback: (resp: { access_token?: string; error?: string }) => void;
+          }) => { requestAccessToken: () => void };
+        };
+      };
+    };
+  }
+}
+
+const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+
 export default function ComparePage() {
   const [viewings, setViewings] = useState<Viewing[] | null>(null);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [cfg, setCfg] = useState<ChecklistConfig | null>(null);
   const [copied, setCopied] = useState(false);
+  const [sheetState, setSheetState] = useState<"idle" | "working" | "error">("idle");
+  const [sheetErr, setSheetErr] = useState("");
 
   useEffect(() => {
     (async () => {
@@ -103,6 +123,72 @@ export default function ComparePage() {
     await navigator.clipboard.writeText(tsv);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
+  }
+
+  /** One-click: OAuth popup → create a spreadsheet with the comparison → open it. */
+  async function createGoogleSheet() {
+    if (!GOOGLE_CLIENT_ID) return;
+    setSheetState("working");
+    setSheetErr("");
+    try {
+      if (!window.google?.accounts?.oauth2) {
+        await new Promise<void>((resolve, reject) => {
+          const s = document.createElement("script");
+          s.src = "https://accounts.google.com/gsi/client";
+          s.onload = () => resolve();
+          s.onerror = () => reject(new Error("Couldn't load Google script"));
+          document.body.appendChild(s);
+        });
+      }
+      const token = await new Promise<string>((resolve, reject) => {
+        const client = window.google!.accounts.oauth2.initTokenClient({
+          client_id: GOOGLE_CLIENT_ID,
+          scope: "https://www.googleapis.com/auth/spreadsheets",
+          callback: (resp) => {
+            if (resp.access_token) resolve(resp.access_token);
+            else reject(new Error(resp.error ?? "Authorization declined"));
+          },
+        });
+        client.requestAccessToken();
+      });
+      const rows = exportRows();
+      const res = await fetch("https://sheets.googleapis.com/v4/spreadsheets", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          properties: { title: `Condo comparison ${new Date().toLocaleDateString("en-SG")}` },
+          sheets: [
+            {
+              properties: { title: "Comparison", gridProperties: { frozenRowCount: 1, frozenColumnCount: 1 } },
+              data: [
+                {
+                  rowData: rows.map((r, ri) => ({
+                    values: r.map((c) => {
+                      const num = Number(c);
+                      const isNum = ri > 0 && c !== "" && !isNaN(num) && /^[\d.]+$/.test(c);
+                      return {
+                        userEnteredValue: isNum ? { numberValue: num } : { stringValue: c },
+                        ...(ri === 0 ? { userEnteredFormat: { textFormat: { bold: true } } } : {}),
+                      };
+                    }),
+                  })),
+                },
+              ],
+            },
+          ],
+        }),
+      });
+      if (!res.ok) {
+        const j = await res.json().catch(() => ({}));
+        throw new Error(j.error?.message ?? `Sheets API error ${res.status}`);
+      }
+      const sheet = await res.json();
+      window.open(sheet.spreadsheetUrl, "_blank");
+      setSheetState("idle");
+    } catch (e) {
+      setSheetErr(e instanceof Error ? e.message : String(e));
+      setSheetState("error");
+    }
   }
 
   if (viewings === null) {
@@ -238,25 +324,32 @@ export default function ComparePage() {
             <div className="card">
               <h2>Export to Google Sheets</h2>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                {GOOGLE_CLIENT_ID && (
+                  <button
+                    type="button"
+                    className="btn primary"
+                    disabled={sheetState === "working"}
+                    onClick={createGoogleSheet}
+                  >
+                    {sheetState === "working" ? "Creating sheet…" : "✨ Create Google Sheet"}
+                  </button>
+                )}
                 <button type="button" className="btn ghost" onClick={copyForSheets}>
                   {copied ? "Copied ✓ — paste into a Sheet" : "📋 Copy for Sheets"}
                 </button>
                 <button type="button" className="btn ghost" onClick={downloadCsv}>
                   ⬇️ Download CSV
                 </button>
-                <a
-                  className="btn ghost"
-                  href="https://sheets.new"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ textDecoration: "none" }}
-                >
-                  ↗ Open sheets.new
-                </a>
               </div>
+              {sheetState === "error" && (
+                <p style={{ color: "var(--score-low)", fontSize: 13, marginTop: 8 }}>
+                  Couldn&apos;t create the sheet: {sheetErr}
+                </p>
+              )}
               <p className="muted" style={{ fontSize: 12, marginTop: 8 }}>
-                &ldquo;Copy for Sheets&rdquo; puts the whole comparison on your clipboard — open a
-                Google Sheet and paste (Cmd/Ctrl-V). The CSV imports via File → Import.
+                {GOOGLE_CLIENT_ID
+                  ? "“Create Google Sheet” asks for one-time Google authorization, builds the sheet and opens it."
+                  : "One-click sheet creation needs a Google OAuth client ID (same setup as Google sign-in — see README). Until then: copy & paste into a sheet, or import the CSV."}
               </p>
             </div>
 

@@ -15,8 +15,9 @@ import {
   scheduledTasks,
   type PurchasePlan,
 } from "@/lib/purchase";
-import { getDoc, saveDoc } from "@/lib/store";
-import { listViewings } from "@/lib/store";
+import Link from "next/link";
+import { getDoc, listViewings, saveDoc } from "@/lib/store";
+import { STATUS_LABELS, type Viewing } from "@/lib/types";
 
 function fmtDate(d: Date): string {
   return d.toLocaleDateString("en-SG", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
@@ -24,7 +25,7 @@ function fmtDate(d: Date): string {
 
 export default function PurchasePage() {
   const [plan, setPlan] = useState<PurchasePlan | null>(null);
-  const [names, setNames] = useState<string[]>([]);
+  const [viewings, setViewings] = useState<Viewing[]>([]);
   const [openTask, setOpenTask] = useState<number | null>(null);
   const [saveState, setSaveState] = useState("");
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -35,9 +36,7 @@ export default function PurchasePage() {
       .then((p) => setPlan(p ?? emptyPlan()))
       .catch(() => setPlan(emptyPlan()));
     listViewings()
-      .then((vs) =>
-        setNames([...new Set(vs.map((v) => v.condoName).filter(Boolean))])
-      )
+      .then((vs) => setViewings(vs.filter((v) => v.condoName.trim())))
       .catch(() => {});
   }, []);
 
@@ -88,20 +87,35 @@ export default function PurchasePage() {
         <div className="card">
           <h2>⚙️ Deal setup</h2>
           <label className="field">
-            <span className="lbl">Property</span>
-            <input
-              type="text"
-              list="viewed-names"
-              placeholder="e.g. Bayshore Park #10-07"
-              value={plan.propertyName}
-              onChange={(e) => update({ propertyName: e.target.value })}
-            />
-            <datalist id="viewed-names">
-              {names.map((n) => (
-                <option key={n} value={n} />
+            <span className="lbl">Property (from your viewings)</span>
+            <select
+              value={plan.propertyId ?? ""}
+              onChange={(e) => {
+                const v = viewings.find((x) => x.id === e.target.value);
+                update({
+                  propertyId: v?.id,
+                  propertyName: v
+                    ? `${v.condoName}${v.block ? ` Blk ${v.block}` : ""} ${v.unit}`.trim()
+                    : "",
+                });
+              }}
+            >
+              <option value="">— Choose the unit you're buying —</option>
+              {viewings.map((v) => (
+                <option key={v.id} value={v.id}>
+                  {v.condoName}
+                  {v.block ? ` Blk ${v.block}` : ""} {v.unit} · {STATUS_LABELS[v.status]}
+                </option>
               ))}
-            </datalist>
+            </select>
           </label>
+          {plan.propertyId && (
+            <p style={{ margin: "-2px 0 8px" }}>
+              <Link href={`/viewing/${plan.propertyId}`} style={{ fontSize: 13 }}>
+                ↗ Open this viewing&apos;s details, photos &amp; notes
+              </Link>
+            </p>
+          )}
           <div className="row3">
             <label className="field">
               <span className="lbl">OTP date</span>
@@ -112,7 +126,7 @@ export default function PurchasePage() {
               />
             </label>
             <label className="field">
-              <span className="lbl">Exercise (weeks)</span>
+              <span className="lbl">Exercise (wks)</span>
               <select
                 value={plan.exerciseWeeks}
                 onChange={(e) => update({ exerciseWeeks: Number(e.target.value) })}
@@ -125,7 +139,7 @@ export default function PurchasePage() {
               </select>
             </label>
             <label className="field">
-              <span className="lbl">Completion (weeks)</span>
+              <span className="lbl">Completion (wks)</span>
               <select
                 value={plan.completionWeeks}
                 onChange={(e) => update({ completionWeeks: Number(e.target.value) })}

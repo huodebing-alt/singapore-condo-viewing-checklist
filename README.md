@@ -71,6 +71,7 @@ Note: live "units for sale" listing counts aren't available from any public API 
 1. In [Google Cloud Console](https://console.cloud.google.com/apis/credentials) create an **OAuth client ID** (type: Web application) and add your deployment URL to *Authorized JavaScript origins*.
 2. Set `NEXT_PUBLIC_GOOGLE_CLIENT_ID` in Vercel env vars and redeploy.
 3. A "Sign in with Google" button appears on the login page; each Google account gets its own workspace automatically.
+4. The same client ID also enables one-click **"Create Google Sheet"** on the Compare page (requests the `spreadsheets` scope on demand). While the OAuth consent screen is in Testing mode, add yourself as a test user.
 
 ### Privacy note
 

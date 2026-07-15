@@ -43,6 +43,8 @@ export type PurchaseTask = {
 
 export type PurchasePlan = {
   propertyName: string;
+  /** id of the linked viewing (picked from viewed properties) */
+  propertyId?: string;
   otpDate: string; // ISO date the OTP was (or will be) granted
   exerciseWeeks: number; // default 2
   completionWeeks: number; // default 10 (after exercise)
