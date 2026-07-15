@@ -27,8 +27,10 @@ export async function GET(req: Request) {
       // stale but no key to refresh — serve what we have
     } else {
       try {
-        await refreshCache();
-        cache = await loadCache();
+        // use the returned cache directly — an immediate Blob re-read can
+        // miss the fresh write (eventual consistency) and masquerade as
+        // "not configured"
+        cache = (await refreshCache()).cache;
       } catch (e) {
         if (!cache) {
           return Response.json(

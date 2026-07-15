@@ -17,8 +17,8 @@ export async function GET(req: Request) {
     return Response.json({ error: "no-key" }, { status: 501 });
   }
   try {
-    const stats = await refreshCache();
-    return Response.json({ ok: true, ...stats });
+    const { projects, tx } = await refreshCache();
+    return Response.json({ ok: true, projects, tx });
   } catch (e) {
     return Response.json(
       { error: "refresh-failed", detail: e instanceof Error ? e.message : String(e) },

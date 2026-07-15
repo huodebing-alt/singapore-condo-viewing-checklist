@@ -49,8 +49,14 @@ function contractMonth(cd: string): string | null {
   return `20${cd.slice(2)}-${cd.slice(0, 2)}`;
 }
 
-/** Pull all 4 batches from URA, keep 12 months, write the Blob cache. */
-export async function refreshCache(): Promise<{ projects: number; tx: number }> {
+/** Pull all 4 batches from URA, keep 12 months, write the Blob cache.
+ *  Returns the fresh cache directly — callers must NOT re-read it from Blob
+ *  immediately (listing is eventually consistent and may miss the write). */
+export async function refreshCache(): Promise<{
+  cache: MarketCache;
+  projects: number;
+  tx: number;
+}> {
   const accessKey = process.env.URA_ACCESS_KEY;
   if (!accessKey) throw new Error("URA_ACCESS_KEY not configured");
   const token = await fetchToken(accessKey);
@@ -113,7 +119,7 @@ export async function refreshCache(): Promise<{ projects: number; tx: number }> 
     allowOverwrite: true,
     contentType: "application/json",
   });
-  return { projects: map.size, tx: txCount };
+  return { cache, projects: map.size, tx: txCount };
 }
 
 export async function loadCache(): Promise<MarketCache | null> {
