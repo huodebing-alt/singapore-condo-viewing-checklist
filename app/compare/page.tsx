@@ -125,9 +125,12 @@ export default function ComparePage() {
         });
       }
       const token = await new Promise<string>((resolve, reject) => {
+        // drive.file is non-sensitive (per-file access to files this app
+        // creates) — no Google verification or "unverified app" warning,
+        // and it's sufficient for spreadsheets.create.
         const client = window.google!.accounts.oauth2.initTokenClient({
           client_id: GOOGLE_CLIENT_ID,
-          scope: "https://www.googleapis.com/auth/spreadsheets",
+          scope: "https://www.googleapis.com/auth/drive.file",
           callback: (resp) => {
             if (resp.access_token) resolve(resp.access_token);
             else reject(new Error(resp.error ?? "Authorization declined"));
