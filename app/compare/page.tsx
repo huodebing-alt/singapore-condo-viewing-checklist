@@ -20,7 +20,8 @@ export default function ComparePage() {
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [cfg, setCfg] = useState<ChecklistConfig | null>(null);
   const [copied, setCopied] = useState(false);
-  const [sheetState, setSheetState] = useState<"idle" | "working" | "error">("idle");
+  const [sheetState, setSheetState] = useState<"idle" | "working" | "done" | "error">("idle");
+  const [sheetUrl, setSheetUrl] = useState("");
   const [sheetErr, setSheetErr] = useState("");
 
   useEffect(() => {
@@ -51,48 +52,99 @@ export default function ComparePage() {
     });
   }
 
-  /** Comparison as rows for CSV/TSV export (Google Sheets friendly). */
-  function exportRows(): string[][] {
+  // ---------- Export: one styled row model drives CSV, clipboard and Sheets ----------
+
+  type CellKind = "header" | "label" | "section" | "score" | "ans" | "money" | "num" | "pct" | "text";
+  type Cell = { v: string | number; k: CellKind; s?: number | null };
+
+  function buildRows(): Cell[][] {
     const name = (v: Viewing) =>
       `${v.condoName || "Unnamed"}${v.block ? ` Blk ${v.block}` : ""} ${v.unit}`.trim();
-    const rows: string[][] = [
-      ["Metric", ...chosen.map(name)],
-      ["Status", ...chosen.map((v) => STATUS_LABELS[v.status])],
-      ["Viewing date", ...chosen.map((v) => v.viewingDate ?? "")],
-      ["Overall score", ...chosen.map((v) => String(overallScore(v.answers, cfg) ?? ""))],
-      ["Asking price (S$)", ...chosen.map((v) => String(v.askingPrice ?? ""))],
-      ["PSF listed (S$)", ...chosen.map((v) => String(psf(v) ?? ""))],
-      ["PSF harmonized (S$)", ...chosen.map((v) => String(harmonizedPsf(v) ?? ""))],
-      ["Size listed (sqft)", ...chosen.map((v) => String(v.sizeSqft ?? ""))],
-      ["Size harmonized (sqft)", ...chosen.map((v) => String(harmonizedSqft(v) ?? ""))],
-      ["Beds", ...chosen.map((v) => String(v.bedrooms ?? ""))],
-      ["Baths", ...chosen.map((v) => String(v.bathrooms ?? ""))],
-      ["District", ...chosen.map((v) => (v.district ? `D${v.district}` : ""))],
-      ["Tenure", ...chosen.map((v) => v.tenure ?? "")],
-      ["TOP", ...chosen.map((v) => String(v.topYear ?? ""))],
-      ["Floor / facing", ...chosen.map((v) => [v.floorBand, v.facing].filter(Boolean).join(" · "))],
-      ["MRT", ...chosen.map((v) => v.condoMeta?.mrt ?? "")],
-      ["MRT walk (min)", ...chosen.map((v) => String(v.condoMeta?.mrtWalkMins ?? ""))],
-      ["Indicative yield (%)", ...chosen.map((v) => String(v.condoMeta?.rentalYieldPct ?? ""))],
-      ...effectiveSections(cfg).map((s) => [
-        `Score: ${s.title}`,
-        ...chosen.map((v) => String(sectionScore(s, v.answers) ?? "")),
-      ]),
-      ["Agent", ...chosen.map((v) => v.agent.name)],
-      ["Agent phone", ...chosen.map((v) => v.agent.phone)],
-      ["Agent agency", ...chosen.map((v) => v.agent.agency)],
-      ["PropertyGuru link", ...chosen.map((v) => v.pgUrl ?? "")],
-      ["Notes", ...chosen.map((v) => v.generalNotes.replace(/\s+/g, " ").trim())],
-    ];
+    const label = (t: string): Cell => ({ v: t, k: "label" });
+    const txt = (t: string | number | undefined | null): Cell => ({ v: t ?? "", k: "text" });
+    const money = (n?: number): Cell => ({ v: n ?? "", k: "money" });
+    const num = (n?: number): Cell => ({ v: n ?? "", k: "num" });
+
+    const rows: Cell[][] = [];
+    rows.push([{ v: "Metric", k: "header" }, ...chosen.map((v) => ({ v: name(v), k: "header" as const }))]);
+    rows.push([label("Status"), ...chosen.map((v) => txt(STATUS_LABELS[v.status]))]);
+    rows.push([label("Viewing date"), ...chosen.map((v) => txt(v.viewingDate))]);
+    rows.push([
+      label("Overall score"),
+      ...chosen.map((v) => {
+        const sc = overallScore(v.answers, cfg);
+        return { v: sc ?? "—", k: "score" as const, s: sc };
+      }),
+    ]);
+    rows.push([label("Asking price"), ...chosen.map((v) => money(v.askingPrice))]);
+    rows.push([label("PSF (listed)"), ...chosen.map((v) => money(psf(v)))]);
+    rows.push([label("PSF (harmonized)"), ...chosen.map((v) => money(harmonizedPsf(v)))]);
+    rows.push([label("Size listed (sqft)"), ...chosen.map((v) => num(v.sizeSqft))]);
+    rows.push([label("Size harmonized (sqft)"), ...chosen.map((v) => num(harmonizedSqft(v)))]);
+    rows.push([label("Beds"), ...chosen.map((v) => num(v.bedrooms))]);
+    rows.push([label("Baths"), ...chosen.map((v) => num(v.bathrooms))]);
+    rows.push([label("District"), ...chosen.map((v) => txt(v.district ? `D${v.district}` : ""))]);
+    rows.push([label("Tenure"), ...chosen.map((v) => txt(v.tenure))]);
+    rows.push([label("TOP"), ...chosen.map((v) => txt(v.topYear))]);
+    rows.push([
+      label("Floor / facing"),
+      ...chosen.map((v) => txt([v.floorBand, v.facing].filter(Boolean).join(" · "))),
+    ]);
+    rows.push([label("MRT"), ...chosen.map((v) => txt(v.condoMeta?.mrt))]);
+    rows.push([label("MRT walk (min)"), ...chosen.map((v) => num(v.condoMeta?.mrtWalkMins))]);
+    rows.push([
+      label("Indicative yield"),
+      ...chosen.map((v) =>
+        v.condoMeta?.rentalYieldPct ? { v: v.condoMeta.rentalYieldPct, k: "pct" as const } : txt("")
+      ),
+    ]);
+
+    for (const sec of effectiveSections(cfg)) {
+      rows.push([
+        { v: `${sec.emoji} ${sec.title}`, k: "section" },
+        ...chosen.map((v) => {
+          const sc = sectionScore(sec, v.answers);
+          return { v: sc ?? "—", k: "score" as const, s: sc };
+        }),
+      ]);
+      for (const q of sec.questions) {
+        rows.push([
+          label(`   ${q.label}${q.weight !== 1 ? ` (×${q.weight})` : ""}`),
+          ...chosen.map((v) => {
+            const val = v.answers[q.id];
+            if (!val) return { v: "—", k: "ans" as const, s: null };
+            const opt = q.options.find((o) => o.value === val);
+            return { v: opt?.label ?? val, k: "ans" as const, s: opt?.score ?? null };
+          }),
+        ]);
+      }
+      if (chosen.some((v) => v.sectionNotes[sec.id])) {
+        rows.push([
+          label("   ↳ Notes"),
+          ...chosen.map((v) => txt((v.sectionNotes[sec.id] ?? "").replace(/\s+/g, " "))),
+        ]);
+      }
+    }
+
+    rows.push([label("Agent"), ...chosen.map((v) => txt(v.agent.name))]);
+    rows.push([label("Agent phone"), ...chosen.map((v) => txt(v.agent.phone))]);
+    rows.push([label("Agent agency"), ...chosen.map((v) => txt(v.agent.agency))]);
+    rows.push([label("PropertyGuru link"), ...chosen.map((v) => txt(v.pgUrl))]);
+    rows.push([
+      label("General notes"),
+      ...chosen.map((v) => txt(v.generalNotes.replace(/\s+/g, " ").trim())),
+    ]);
     return rows;
   }
 
+  const plainRows = () => buildRows().map((r) => r.map((c) => String(c.v)));
+
   function downloadCsv() {
     const esc = (s: string) => (/[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s);
-    const csv = exportRows()
+    const csv = plainRows()
       .map((r) => r.map(esc).join(","))
       .join("\n");
-    const blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8" });
+    const blob = new Blob(["\ufeff" + csv], { type: "text/csv;charset=utf-8" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
     a.download = `condo-comparison-${new Date().toISOString().slice(0, 10)}.csv`;
@@ -101,7 +153,7 @@ export default function ComparePage() {
   }
 
   async function copyForSheets() {
-    const tsv = exportRows()
+    const tsv = plainRows()
       .map((r) => r.map((c) => c.replace(/\t/g, " ")).join("\t"))
       .join("\n");
     await navigator.clipboard.writeText(tsv);
@@ -109,11 +161,70 @@ export default function ComparePage() {
     setTimeout(() => setCopied(false), 2500);
   }
 
-  /** One-click: OAuth popup → create a spreadsheet with the comparison → open it. */
+  // ---------- Google Sheet with app-like formatting ----------
+
+  const rgb = (hex: string) => ({
+    red: parseInt(hex.slice(1, 3), 16) / 255,
+    green: parseInt(hex.slice(3, 5), 16) / 255,
+    blue: parseInt(hex.slice(5, 7), 16) / 255,
+  });
+  const INK = rgb("#17271d");
+  const WHITE = rgb("#ffffff");
+  const scoreBg = (s: number) => rgb(s >= 75 ? "#2f8f60" : s >= 50 ? "#d99a06" : "#d64545");
+  const ANS_BG: Record<number, string> = { 3: "#c9ecd8", 2: "#e3f4ea", 1: "#fdeec7", 0: "#f8d3d3" };
+
+  function sheetCell(c: Cell, colIdx: number) {
+    const value =
+      typeof c.v === "number" ? { numberValue: c.v } : { stringValue: String(c.v) };
+    const fmt: Record<string, unknown> = {
+      textFormat: { foregroundColor: INK, fontSize: 10 },
+      verticalAlignment: "MIDDLE",
+      wrapStrategy: colIdx === 0 ? "WRAP" : "CLIP",
+    };
+    switch (c.k) {
+      case "header":
+        fmt.backgroundColor = rgb("#12382a");
+        fmt.textFormat = { foregroundColor: WHITE, bold: true, fontSize: 10 };
+        fmt.wrapStrategy = "WRAP";
+        break;
+      case "section":
+        fmt.backgroundColor = rgb("#d9efe2");
+        fmt.textFormat = { foregroundColor: INK, bold: true, fontSize: 10 };
+        break;
+      case "score":
+        if (typeof c.s === "number") {
+          fmt.backgroundColor = scoreBg(c.s);
+          fmt.textFormat = { foregroundColor: WHITE, bold: true, fontSize: 10 };
+        } else fmt.backgroundColor = rgb("#eef1ef");
+        fmt.horizontalAlignment = "CENTER";
+        break;
+      case "ans":
+        fmt.backgroundColor = rgb(
+          typeof c.s === "number" ? ANS_BG[c.s] ?? "#f1f4f2" : "#f1f4f2"
+        );
+        break;
+      case "money":
+        fmt.numberFormat = { type: "CURRENCY", pattern: "$#,##0" };
+        break;
+      case "num":
+        fmt.numberFormat = { type: "NUMBER", pattern: "#,##0" };
+        break;
+      case "pct":
+        fmt.numberFormat = { type: "NUMBER", pattern: '0.0"%"' };
+        break;
+      case "label":
+        fmt.textFormat = { foregroundColor: INK, bold: true, fontSize: 10 };
+        break;
+    }
+    return { userEnteredValue: value, userEnteredFormat: fmt };
+  }
+
+  /** One-click: OAuth popup → create a formatted spreadsheet → link to it. */
   async function createGoogleSheet() {
     if (!GOOGLE_CLIENT_ID) return;
     setSheetState("working");
     setSheetErr("");
+    setSheetUrl("");
     try {
       if (!window.google?.accounts?.oauth2) {
         await new Promise<void>((resolve, reject) => {
@@ -125,11 +236,10 @@ export default function ComparePage() {
         });
       }
       const token = await new Promise<string>((resolve, reject) => {
-        // drive.file is non-sensitive (per-file access to files this app
-        // creates) — no Google verification or "unverified app" warning,
-        // and it's sufficient for spreadsheets.create.
         const client = window.google!.accounts.oauth2.initTokenClient({
           client_id: GOOGLE_CLIENT_ID,
+          // drive.file is non-sensitive (per-file access to files this app
+          // creates) and is sufficient for spreadsheets.create.
           scope: "https://www.googleapis.com/auth/drive.file",
           callback: (resp) => {
             if (resp.access_token) resolve(resp.access_token);
@@ -138,7 +248,7 @@ export default function ComparePage() {
         });
         client.requestAccessToken();
       });
-      const rows = exportRows();
+      const rows = buildRows();
       const res = await fetch("https://sheets.googleapis.com/v4/spreadsheets", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
@@ -146,19 +256,17 @@ export default function ComparePage() {
           properties: { title: `Condo comparison ${new Date().toLocaleDateString("en-SG")}` },
           sheets: [
             {
-              properties: { title: "Comparison", gridProperties: { frozenRowCount: 1, frozenColumnCount: 1 } },
+              properties: {
+                title: "Comparison",
+                gridProperties: { frozenRowCount: 1, frozenColumnCount: 1 },
+              },
               data: [
                 {
-                  rowData: rows.map((r, ri) => ({
-                    values: r.map((c) => {
-                      const num = Number(c);
-                      const isNum = ri > 0 && c !== "" && !isNaN(num) && /^[\d.]+$/.test(c);
-                      return {
-                        userEnteredValue: isNum ? { numberValue: num } : { stringValue: c },
-                        ...(ri === 0 ? { userEnteredFormat: { textFormat: { bold: true } } } : {}),
-                      };
-                    }),
-                  })),
+                  rowData: rows.map((r) => ({ values: r.map((c, ci) => sheetCell(c, ci)) })),
+                  columnMetadata: [
+                    { pixelSize: 300 },
+                    ...chosen.map(() => ({ pixelSize: 170 })),
+                  ],
                 },
               ],
             },
@@ -170,8 +278,9 @@ export default function ComparePage() {
         throw new Error(j.error?.message ?? `Sheets API error ${res.status}`);
       }
       const sheet = await res.json();
-      window.open(sheet.spreadsheetUrl, "_blank");
-      setSheetState("idle");
+      setSheetUrl(sheet.spreadsheetUrl);
+      setSheetState("done");
+      window.open(sheet.spreadsheetUrl, "_blank"); // often blocked post-await; link below is the reliable path
     } catch (e) {
       setSheetErr(e instanceof Error ? e.message : String(e));
       setSheetState("error");
@@ -328,6 +437,15 @@ export default function ComparePage() {
                   ⬇️ Download CSV
                 </button>
               </div>
+              {sheetState === "done" && sheetUrl && (
+                <div className="banner" style={{ marginTop: 10 }}>
+                  ✅ Sheet created!{" "}
+                  <a href={sheetUrl} target="_blank" rel="noreferrer">
+                    <strong>Open the Google Sheet →</strong>
+                  </a>{" "}
+                  (it&apos;s also in your Google Drive as &ldquo;Condo comparison&rdquo;)
+                </div>
+              )}
               {sheetState === "error" && (
                 <p style={{ color: "var(--score-low)", fontSize: 13, marginTop: 8 }}>
                   Couldn&apos;t create the sheet: {sheetErr}
